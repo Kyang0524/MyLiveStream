@@ -1,9 +1,9 @@
 var card = document.getElementById("card");
 
-function openRegister(){
+function backpage(){
   card.style.transform = "rotateY(-180deg)";
 }
 
-function openLogin(){
+function frontpage(){
   card.style.transform = "rotateY(0deg)";
 }
