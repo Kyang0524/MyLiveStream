@@ -20,7 +20,8 @@ if(!roomId){
     roomId = 'main'
 }
 
-let displayName = sessionStorage.getItem('display_name')
+//let displayName = sessionStorage.getItem('display_name')
+let displayName = aaa;
 if(!displayName){
     window.location = 'lobby.html'
 }
