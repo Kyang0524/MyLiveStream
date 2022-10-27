@@ -37,7 +37,7 @@
 <div class="card-back">
  
        <h2>LOGIN</h2>
-       <form action="Register.php" method="post">
+       <form action="Register.php" method="post" id="lobby__form">
          <?php include('errors.php');?>
          <input type="text" class="input-box" placeholder="UserName" name="username" required >
          <input type="password" class="input-box" placeholder="Password" name="password" required>
