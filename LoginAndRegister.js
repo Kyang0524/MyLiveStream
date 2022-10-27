@@ -8,4 +8,7 @@ function frontpage(){
   card.style.transform = "rotateY(0deg)";
 }
 
-
+function saveData(){
+  var username = document.getElementById("username");
+  sessionStorage.setItem("display_name", username.value)
+}

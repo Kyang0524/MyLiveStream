@@ -20,10 +20,10 @@ if(!roomId){
     roomId = 'main'
 }
 
-//let displayName = sessionStorage.getItem('display_name')
-let displayName = aaa;
+let displayName = sessionStorage.getItem('display_name')
+
 if(!displayName){
-    window.location = 'lobby.html'
+    window.location = 'home.html'
 }
 
 let localTracks = []

@@ -39,9 +39,9 @@
        <h2>LOGIN</h2>
        <form action="Register.php" method="post">
          <?php include('errors.php');?>
-         <input type="text" class="input-box" placeholder="UserName" name="username" required >
+         <input type="text" class="input-box" placeholder="UserName" name="username" id="username" required >
          <input type="password" class="input-box" placeholder="Password" name="password" required>
-         <button type="submit" class="submit-btn" name="login_user">Submit</button>
+         <button type="submit" class="submit-btn" name="login_user" onclick="saveData()">Submit</button>
          <input type="checkbox"><span>Remember Me</span>
        </form>
   <button type="button" class="btn" onclick="frontpage()">I'm New User</button>
