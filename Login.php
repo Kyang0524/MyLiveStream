@@ -1,3 +1,4 @@
+<?php include('LoginAndRegister.php')?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,8 @@
 <div class="inner-box" id="card">
 <div class="card-front">
        <h2>LOGIN</h2>
-       <form action="LoginAndRegister.php" method="post">
+       <form action="Login.php" method="post">
+       <?php include('errors.php');?>
          <input type="text" class="input-box" placeholder="UserName" name="username" required >
          <input type="text" class="input-box" placeholder="Password" name="password" required>
          <button type="submit" class="submit-btn" name="login_user">Submit</button>
@@ -33,7 +35,8 @@
   </div>
 <div class="card-back">
   <h2>Register</h2>
-       <form action="LoginAndRegister.php" method="post">
+       <form action="Login.php" method="post">
+       <?php include('errors.php');?>
          <input type="text" class="input-box" placeholder="UserName" id="username" name="username" >
          <input type="email" class="input-box" placeholder="Email" id="email" name="email" >
          <input type="password" class="input-box" placeholder="Password" id="password_1" name="password_1" >
