@@ -62,7 +62,7 @@ if (count($errors) == 0) {
     mysqli_query($db,$query);
     //$_SESSION['username'] = $username ;
     $_SESSION['success'] = "Successful Register!";
-    header('location: LoginAndRegister.html');
+    header('location: live.html');
 }
 
 
@@ -85,7 +85,7 @@ if (isset($_POST['login_user'])) {
           if (mysqli_num_rows($results) == 1) {
             //$_SESSION['username'] = $username;
             //$_SESSION['success'] = "You are now logged in";
-            header('location: home.html');
+            header('location: live.html');
           }else {
                   array_push($errors, "Wrong username/password combination");
           }
