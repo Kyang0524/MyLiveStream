@@ -26,7 +26,7 @@
        <form action="Login.php" method="post" >
        <?php include('errors.php');?>
          <input type="text" class="input-box" placeholder="UserName" name="username" required >
-         <input type="password" class="input-box" placeholder="Password" name="password" >
+         <input type="password" class="input-box" placeholder="Password" name="password" required>
          <button type="submit" class="submit-btn" name="login_user" >Submit</button>
          <input type="checkbox"><span>Remember Me</span>
        </form>
