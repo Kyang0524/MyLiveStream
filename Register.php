@@ -3,7 +3,7 @@
 <html>
 <head>
         <title>LoginAndRegister</title>
-        <link rel="stylesheet" href="LoginAndRegister.css">
+        <link rel="stylesheet" href="style/LoginAndRegister.css">
 </head>
 <body>
 <nav>
@@ -53,5 +53,7 @@
 </body>
 
 
-<script type="text/javascript" src="LoginAndRegister.js"></script>
+<script type="text/javascript" src="js/LoginAndRegister.js"></script>
+<script type="text/javascript" src="js/nicepage.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 </html>
