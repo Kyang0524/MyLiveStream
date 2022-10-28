@@ -82,8 +82,8 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;     
   	  $_SESSION['money'] = $rowData['money'];
-      $UID = $rowData['UID'];
-  	  header("location: Room.php?room=$UID");
+      $_SESSION['UID'] = $rowData['UID']
+  	  header("location: Home.php");
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
