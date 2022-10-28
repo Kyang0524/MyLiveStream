@@ -8,7 +8,10 @@ $db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_N
 $query = "SELECT * FROM users WHERE username='$username'";
 $results = mysqli_query($db, $query);
 $rowData = $results -> fetch_assoc();
+
 $UID = $rowData['UID'];
-header("location: Room.html?room=$UID");
+$money = $money['money'];
+
+header("location: Room.php?room=$UID");
 
 ?>

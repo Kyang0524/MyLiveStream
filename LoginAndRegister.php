@@ -58,7 +58,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($db, $query);
   	//$_SESSION['username'] = $username;
   	//$_SESSION['success'] = "You are now logged in";
-  	header('location: Home.html');
+  	header('location: Home.php');
   }
 }
 
@@ -81,9 +81,9 @@ if (isset($_POST['login_user'])) {
     $rowData = $results -> fetch_assoc();
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;     
-  	  //$_SESSION['success'] = "You are now logged in";
+  	  $_SESSION['money'] = $rowData['money'];
       $UID = $rowData['UID'];
-  	  header("location: Room.html?room=$UID");
+  	  header("location: Room.php?room=$UID");
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
