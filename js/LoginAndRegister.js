@@ -10,7 +10,5 @@ function frontpage(){
 
 function saveData(){
   var username = document.getElementById("username");
-  sessionStorage.setItem("display_name", username.value)
-  window.location = `room.html?room=${username.value}`
-
+  sessionStorage.setItem("display_name", username.value);
 }
