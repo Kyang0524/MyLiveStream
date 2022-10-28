@@ -11,4 +11,5 @@ function frontpage(){
 function saveData(){
   var username = document.getElementById("username");
   sessionStorage.setItem("display_name", username.value);
+
 }

@@ -78,15 +78,12 @@ if (isset($_POST['login_user'])) {
   	$password = md5($password);
   	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
-    $queryUID = "SELECT UID FROM users WHERE username='$username'";
-    $UIDresults = mysqli_query($db,$queryUID);
-        while($rowData = $UIDresults -> fetch_assoc()){
-            $UID = $rowData['UID'];
-        }
+    $rowData = $results -> fetch_assoc();
   	if (mysqli_num_rows($results) == 1) {
   	  //$_SESSION['username'] = $username;     
   	  //$_SESSION['success'] = "You are now logged in";
-  	  header('location: room.html?room=$UID');
+      $UID = $rowData['UID'];
+  	  header("location: Room.html?room=$UID");
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}

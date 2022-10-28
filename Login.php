@@ -65,7 +65,7 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="https://nicepage.me" class="u-enable-responsive u-image u-logo u-image-1" data-image-width="1200" data-image-height="844">
+        <a class="u-enable-responsive u-image u-logo u-image-1" data-image-width="1200" data-image-height="844">
           <img src="images/1200px-YouTube_Diamond_Play_Button.svg.png" class="u-logo-image u-logo-image-1">
         </a>
       </div></header>
