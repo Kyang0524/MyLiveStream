@@ -80,9 +80,10 @@ if (isset($_POST['login_user'])) {
   	$results = mysqli_query($db, $query);
     $rowData = $results -> fetch_assoc();
   	if (mysqli_num_rows($results) == 1) {
-  	  //$_SESSION['username'] = $username;     
+  	  $_SESSION['username'] = $username;     
   	  //$_SESSION['success'] = "You are now logged in";
       $UID = $rowData['UID'];
+      $_SESSION['UID'] = $UID;
   	  header("location: Room.html?room=$UID");
   	}else {
   		array_push($errors, "Wrong username/password combination");
