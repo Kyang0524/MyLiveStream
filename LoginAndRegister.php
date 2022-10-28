@@ -83,7 +83,6 @@ if (isset($_POST['login_user'])) {
   	  $_SESSION['username'] = $username;     
   	  //$_SESSION['success'] = "You are now logged in";
       $UID = $rowData['UID'];
-      $_SESSION['UID'] = $UID;
   	  header("location: Room.html?room=$UID");
   	}else {
   		array_push($errors, "Wrong username/password combination");
