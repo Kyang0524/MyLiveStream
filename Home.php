@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <title>Home</title>
     <link rel="stylesheet" href="style/nicepage.css" media="screen">
-<link rel="stylesheet" href="style/Hometest.css" media="screen">
+<link rel="stylesheet" href="style/Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.20.1, nicepage.com">
