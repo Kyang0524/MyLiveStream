@@ -38,7 +38,7 @@
             <section id="members__container">
 
             <div id="members__header">
-                <p>Participants</p>
+                <p>OnlineUsers</p>
                 <strong id="members__count">0</strong>
             </div>
 
