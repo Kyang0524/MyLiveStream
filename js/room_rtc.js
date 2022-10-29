@@ -74,6 +74,8 @@ let joinStream = async () => {
 
     localTracks[1].play(`user-${uid}`)
     await client.publish([localTracks[0], localTracks[1]])
+
+    
 }
 
 let switchToCamera = async () => {
@@ -90,6 +92,8 @@ let switchToCamera = async () => {
 
     localTracks[1].play(`user-${uid}`)
     await client.publish([localTracks[1]])
+
+    
 }
 
 let handleUserPublished = async (user, mediaType) => {
