@@ -6,6 +6,7 @@ $DATABASE_USER='root';
 $DATABASE_PASS='123456';
 $DATABASE_NAME='users';
 // connect to the database
+$errors = array(); 
 
 if(isset($_SESSION['username'])):
 $username = $_SESSION['username'];
@@ -19,21 +20,20 @@ $rowData = $results -> fetch_assoc();
 $money = $rowData['money'];
 
 if (isset($_POST['JoinRoom'])) {
-    $StreamerName = mysqli_real_escape_string($db, $_POST['StreamerName']);
+    $streamer = mysqli_real_escape_string($db, $_POST['streamer']);
   
-    if (empty($StreamerName)) {
+    if (empty($streamer)) {
         array_push($errors, "StreamerName is required");
     }
-  
     if (count($errors) == 0) {
-        $query = "SELECT * FROM room WHERE streamername='$StreamerName' ";
+        $query = "SELECT * FROM room WHERE streamername='$streamer' ";
         $results = mysqli_query($db, $query);
         $rowData = $results -> fetch_assoc();
         if (mysqli_num_rows($results) == 1) {
           $room = $rowData['roomname'];
           header("location: $room");
         }else {
-            array_push($errors, "No have this Stream");
+            array_push($errors, "No have This Room!");
         }
     }
   }
@@ -60,8 +60,8 @@ endif
 
             <div id="form__content__wrapper">
                 <form action="JoinRoom.php" method="post">
-                    
-                    <input type="text" name="StreamerName" required/>
+                    <?php include('errors.php');?>
+                    <input type="text" name="streamer" required/>
                     <button type="submit" class="submit-btn" name="JoinRoom">Submit</button>
                 </form>
             </div>
