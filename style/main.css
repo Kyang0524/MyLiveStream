@@ -69,6 +69,11 @@ a {
   padding: 16px 5%;
   z-index: 999;
 }
+@media (max-width: 350px) {
+  #nav {
+    display: none;
+  }
+}
 
 #logo {
   display: flex;
@@ -160,7 +165,7 @@ a {
   height: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1200px) {
   #members__button {
     display: block;
   }
@@ -185,3 +190,7 @@ a {
     background-color: transparent;
   }
 }
+@media (max-width: 350px) {
+  #join-btn {
+    display: none;
+  }
