@@ -15,6 +15,9 @@ $rowData = $results -> fetch_assoc();
 
 $UID = $rowData['UID'];
 $money = $rowData['money'];
+$room = "Room.php?room=$UID";
+$Inputquery = "INSERT INTO room (roomname , streamername) VALUE('$room','$username')";
+mysqli_query($db,$Inputquery);
 
 header("location: Room.php?room=$UID");
 endif
