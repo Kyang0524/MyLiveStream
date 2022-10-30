@@ -18,7 +18,7 @@ $rowData = $results -> fetch_assoc();
 $UID = $rowData['UID'];
 $money = $rowData['money'];
 $room = "ClientRoom.php?room=$UID";
-$Inputquery = "INSERT INTO room (roomID,roomname , streamername) VALUE('$UID','$room','$username')";
+$Inputquery = "INSERT INTO room (roomID,roomname , streamername) VALUE('$UID','$room','$username') WHERE NOT EXISTS";
 mysqli_query($db,$Inputquery);
 
 $_SESSION['RoomID'] = $UID;
