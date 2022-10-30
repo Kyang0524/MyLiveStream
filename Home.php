@@ -57,7 +57,7 @@
 -->
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Feedback</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="GetDB.php"  style="padding: 10px 0px 10px 2px;" onclick="SetCreateName()">CreateRoom</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="CreateRoom.php"  style="padding: 10px 0px 10px 2px;" >CreateRoom</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="JoinRoom.php"  style="padding: 10px 0px 10px 2px;" >JoinRoom</a>
 </li></ul>
           </div>
@@ -72,7 +72,7 @@
 -->
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">Feedback</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="GetDB.php" onclick="SetCreateName()">CreateRoom</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CreateRoom.php" >CreateRoom</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="JoinRoom.php">JoinRoom</a>
 </li></ul>
               </div>

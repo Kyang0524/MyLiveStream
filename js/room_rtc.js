@@ -15,12 +15,12 @@ let channel;
 //const queryString = window.location.search
 //const urlParams = new URLSearchParams(queryString)
 function SetCreateName() {  
-    id = sessionStorage.getItem('display_name');
-    sessionStorage.setItem("streamer_name", id.value)
+    get = sessionStorage.getItem('display_name');
+    sessionStorage.setItem("streamer_name", get.value)
     }  
 function getRoom(){
     var streamer = document.getElementById("streamer");
-    sessionStorage.setItem("streamer_name",streamer.value);    
+    sessionStorage.setItem("streamer_name", streamer.value);    
   }
 id = sessionStorage.getItem('streamer_name');
 
