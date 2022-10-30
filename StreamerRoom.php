@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
 
-    <link rel='stylesheet' type='text/css' media='screen' href='style/room.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/StreamerRoom.css'>
 </head>
 <body>
 

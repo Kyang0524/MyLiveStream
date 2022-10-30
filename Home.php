@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="style/Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <script type="text/javascript" src="js/room_rtc.js"></script>
     <meta name="generator" content="Nicepage 4.20.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -56,8 +57,8 @@
 -->
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Feedback</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="GetDB.php"  style="padding: 10px 0px 10px 2px;">CreateRoom</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="JoinRoom.php"  style="padding: 10px 0px 10px 2px;">JoinRoom</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="GetDB.php"  style="padding: 10px 0px 10px 2px;" onclick="SetCreateName()">CreateRoom</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="JoinRoom.php"  style="padding: 10px 0px 10px 2px;" onclick="SetJoinName()">JoinRoom</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">

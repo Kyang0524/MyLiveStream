@@ -30,8 +30,8 @@ if (isset($_POST['JoinRoom'])) {
         $results = mysqli_query($db, $query);
         $rowData = $results -> fetch_assoc();
         if (mysqli_num_rows($results) == 1) {
-          $room = $rowData['roomname'];
-          header("location: $room");
+          $RoomID = $rowData['RoomID'];
+          header("location: ClientRoom.php?room=$RoomID");
         }else {
             array_push($errors, "No have This Room!");
         }
@@ -61,13 +61,13 @@ endif
             <div id="form__content__wrapper">
                 <form action="JoinRoom.php" method="post">
                     <?php include('errors.php');?>
-                    <input type="text" name="streamer" required/>
-                    <button type="submit" class="submit-btn" name="JoinRoom">Submit</button>
+                    <input type="text" name="streamer" id="streamer" required/>
+                    <button type="submit" class="submit-btn" name="JoinRoom" onclick="getRoom()" >Submit</button>
                 </form>
             </div>
         </div>
     </main>
 
-
+    <script type="text/javascript" src="js/room_rtc.js"></script>
 
 </body>

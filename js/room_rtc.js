@@ -12,9 +12,21 @@ let client;
 let rtmClient;
 let channel;
 
-const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-let roomId = urlParams.get('room')
+//const queryString = window.location.search
+//const urlParams = new URLSearchParams(queryString)
+function SetCreateName() {  
+    id = sessionStorage.getItem('display_name');
+    sessionStorage.setItem("streamer_name", id.value)
+    }  
+function getRoom(){
+    var streamer = document.getElementById("streamer");
+    sessionStorage.setItem("streamer_name",streamer.value);    
+  }
+id = sessionStorage.getItem('streamer_name');
+
+let roomId = id
+//urlParams.get('room')
+//$_SESSION['RoomID']
 
 if(!roomId){
     roomId = 'main'
@@ -93,7 +105,16 @@ let switchToCamera = async () => {
     localTracks[1].play(`user-${uid}`)
     await client.publish([localTracks[1]])
 
-    
+    displayFrame.insertAdjacentHTML('beforeend', player)
+
+    await localTracks2[0].setMuted(true)
+    await localTracks2[1].setMuted(true)
+
+    document.getElementById('mic-btn').classList.remove('active')
+    document.getElementById('screen-btn').classList.remove('active')
+
+    localTracks2[1].play(`user-${uid}`)
+    await client.publish([localTracks2[1]])
 }
 
 let handleUserPublished = async (user, mediaType) => {

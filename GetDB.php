@@ -15,10 +15,12 @@ $rowData = $results -> fetch_assoc();
 
 $UID = $rowData['UID'];
 $money = $rowData['money'];
-$room = "Room.php?room=$UID";
-$Inputquery = "INSERT INTO room (roomname , streamername) VALUE('$room','$username')";
+$room = "ClientRoom.php?room=$UID";
+$Inputquery = "INSERT INTO room (roomID,roomname , streamername) VALUE('$UID','$room','$username')";
 mysqli_query($db,$Inputquery);
 
-header("location: Room.php?room=$UID");
+$_SESSION['RoomID'] = $UID;
+
+header("location: StreamerRoom.php?room=$UID");
 endif
 ?>
