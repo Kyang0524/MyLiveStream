@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$errors = array(); 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +22,10 @@
             </div>
 
             <div id="form__content__wrapper">
-                <form action="CreateRoom.php" method="post">
+                <form action="GetDB.php" method="post">
                     <?php include('errors.php');?>
-                    <input type="text" name="streamer" id="streamer" required/>
-                    <button type="submit" class="submit-btn" name="CreateRoom" herf="GetDB.php" onclick="SetCreateName()" >Submit</button>
+                    <input type="text" name="username" id="username" required/>
+                    <button type="submit" class="submit-btn" name="CreateRoom"  onclick="SetCreateName()" >Submit</button>
                 </form>
             </div>
         </div>

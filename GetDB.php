@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$errors = array(); 
+
 $DATABASE_HOST='20.25.120.191:3306';
 $DATABASE_USER='root';
 $DATABASE_PASS='123456';
