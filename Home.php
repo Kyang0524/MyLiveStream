@@ -8,6 +8,23 @@
         unset($_SESSION['username']);
         header("location: Home.php");
 }
+
+        $DATABASE_HOST='20.25.120.191:3306';
+        $DATABASE_USER='root';
+        $DATABASE_PASS='123456';
+        $DATABASE_NAME='users';
+        // connect to the database
+        $db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+        $currentname = $_SESSION['username'];
+        $query = "SELECT * FROM users WHERE username='$currentname' ";
+        $results = mysqli_query($db, $query);
+        $rowData = $results -> fetch_assoc();
+        if (mysqli_num_rows($results) == 1) {
+        $_SESSION['money'] = $rowData['money'];
+        }
+
+
 ?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
@@ -178,10 +195,15 @@ background-color: #000000 !important
     
     
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-58e8"><div class="u-clearfix u-sheet u-sheet-1">
-    <?php if(isset($_SESSION['username'])): ?>
-    <p class="u-small-text u-text u-text-variant u-text-1"><?php echo $_SESSION['username']?><br><?php echo $_SESSION['money']?></p>
+    <p class="u-small-text u-text u-text-variant u-text-1"><b id='currentname'></b><br>
+     $<b id='currentmoney'></b></p>
     <p> <a href="Home.php?logout='1'" style="color:red;">logout</a> </p>
-    <?php endif ?>
-</div></footer>
+</div>
+<script>
+   currentname.innerHTML = sessionStorage.getItem('display_name');
+   sessionStorage.setItem('currentmoney',<?php echo $_SESSION['money']?>);
+   currentmoney.innerHTML = sessionStorage.getItem('currentmoney');
+</script>
+</footer>
   
 </body></html>

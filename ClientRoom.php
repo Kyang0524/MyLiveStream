@@ -1,4 +1,22 @@
-<?php session_start();?>
+<?php session_start();
+
+
+        $DATABASE_HOST='20.25.120.191:3306';
+        $DATABASE_USER='root';
+        $DATABASE_PASS='123456';
+        $DATABASE_NAME='users';
+
+        $db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+        $currentname = $_SESSION['username'];
+        $_SESSION['money'] = $_SESSION['money'] - '50';
+        $clientcurrentmoney = $_SESSION['money'];
+        $query = "UPDATE users SET money='$clientcurrentmoney' WHERE username='$currentname' ";
+        $results = mysqli_query($db, $query);
+
+        $streamername = $_SESSION['streamer_name'];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +43,9 @@
        </div>
 
         <div id="nav__links">
-            <?php if(isset($_SESSION['username'])): ?>
-             <p class="u-small-text u-text u-text-variant u-text-1"><?php echo $_SESSION['username']?></p>
-             <p class="u-small-text u-text u-text-variant u-text-1">$<?php echo $_SESSION['money']?></p>
-            <?php endif ?>
+            <button type="button" onclick="DonateValue(50)" href="ClientRoom.php" name="donate"  >Donate </button>
+            <p class="u-small-text u-text u-text-variant u-text-1"><b id="currentname"></b></p>
+            <p class="u-small-text u-text u-text-variant u-text-1">$<b id="currentmoney"></b></p>
             <button id="chat__button"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#ede0e0" clip-rule="evenodd"><path d="M24 20h-3v4l-5.333-4h-7.667v-4h2v2h6.333l2.667 2v-2h3v-8.001h-2v-2h4v12.001zm-15.667-6l-5.333 4v-4h-3v-14.001l18 .001v14h-9.667zm-6.333-2h3v2l2.667-2h8.333v-10l-14-.001v10.001z"/></svg></button>
             <a class="nav__link" id="create__room__btn" href="Home.php">
                 Leave Room
@@ -95,4 +112,5 @@
 <script type="text/javascript" src="js/room.js"></script>
 <script type="text/javascript" src="js/room_rtm.js"></script>
 <script type="text/javascript" src="js/room_rtc.js"></script>
+<script type="text/javascript" src="js/donate.js"></script>
 </html>

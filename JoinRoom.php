@@ -31,6 +31,7 @@ if (isset($_POST['JoinRoom'])) {
         $rowData = $results -> fetch_assoc();
         if (mysqli_num_rows($results) == 1) {
           $RoomID = $rowData['RoomID'];
+          $_SESSION['streamer_name']=$streamer;
           header("location: ClientRoom.php?room=$RoomID");
         }else {
             array_push($errors, "No have This Room!");
