@@ -91,7 +91,6 @@
 <script type="text/javascript" src="js/room.js"></script>
 <script type="text/javascript" src="js/room_rtm.js"></script>
 <script type="text/javascript" src="js/room_rtc.js"></script>
-<script type="text/javascript" src="js/donate_50.js"></script>
 <script>
  currentname.innerHTML = sessionStorage.getItem('display_name');
 </script>
