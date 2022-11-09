@@ -201,7 +201,7 @@ if(clicks_2000 == 99){
  clearTimeout(stopimg_2000);
 }  
   
-   var currentmoney = 'document.getElementById("currentmoney")';
+   var currentmoney = document.getElementById("currentmoney");
    var money=document.getElementById('btn_2000').value;
    currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
    var clientmoney = currentmoney.innerHTML;
