@@ -35,7 +35,7 @@ if(!roomId){
 let displayName = sessionStorage.getItem('display_name')
 
 if(!displayName){
-    window.location = 'Home.php'
+    window.location = 'Login.php'
 }
 
 let localTracks = []

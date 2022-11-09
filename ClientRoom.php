@@ -9,7 +9,7 @@
     <title>Room</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/ClientRoom.css'>
 </head>
 <body>
@@ -55,11 +55,29 @@
             <section id="stream__container">
 
                 <div id="stream__box"></div>
-
+                        
                 <div id="streams__container"></div>
-
-                <div class="stream__actions">
-                    <button id="camera-btn" class="active">
+                <section id="donate__display__container">
+      
+                        <div id = "donate_2000">
+                          <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_2000" >0</a>
+                        </div>
+                        <div id = "donate_1000">
+                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_1000" >0</a>
+                          </div>
+                          <div id = "donate_500">
+                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_500" >0</a>
+                          </div>
+                          <div id = "donate_100">
+                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_100" >0</a>
+                          </div>
+                          <div id = "donate_50">
+                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_50" >0</a>
+                          </div>
+                </section>
+                <div class="stream_actions">
+                    
+                    <!-- <button id="camera-btn" class="active">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 4h-3v-1h3v1zm10.93 0l.812 1.219c.743 1.115 1.987 1.781 3.328 1.781h1.93v13h-20v-13h3.93c1.341 0 2.585-.666 3.328-1.781l.812-1.219h5.86zm1.07-2h-8l-1.406 2.109c-.371.557-.995.891-1.664.891h-5.93v17h24v-17h-3.93c-.669 0-1.293-.334-1.664-.891l-1.406-2.109zm-11 8c0-.552-.447-1-1-1s-1 .448-1 1 .447 1 1 1 1-.448 1-1zm7 0c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3zm0-2c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5z"/></svg>
                     </button>
                     <button id="mic-btn" class="active">
@@ -70,11 +88,30 @@
                     </button>
                     <button id="leave-btn" style="background-color: #FF5050;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z"/></svg>
-                    </button>
+                    </button> -->
                 </div>
 
                 <button id="join-btn">Join Stream</button>
 
+            </section>
+
+            <section id="gift__container">
+                <button type="submit" onclick="return donate_50();" value="50" name="money" id="btn_50">
+                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$50
+                </button>
+               
+                <button type="submit" onclick="return donate_100();" value="100" name="money" id="btn_100">
+                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$100
+                </button>
+                <button type="submit" onclick="return donate_500();" value="500" name="money" id="btn_500">
+                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$500
+                </button>
+                <button type="submit" onclick="return donate_1000();" value="1000" name="money" id="btn_1000">
+                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$1000
+                </button>
+                <button type="submit" onclick="return donate_2000();" value="2000" name="money" id="btn_2000">
+                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$2000
+                </button>
             </section>
 
             <section id="messages__container">
@@ -82,7 +119,6 @@
                 <div id="messages"></div>
 
                 <form id="message__form">
-                    <button type="submit" onclick="return donate_50();" value="50" name="money" id="money" >50</button>
                     <input type="text" name="message" placeholder="Send a message...." />
                 </form>
 
@@ -97,6 +133,7 @@
 <script type="text/javascript" src="js/room_rtm.js"></script>
 <script type="text/javascript" src="js/room_rtc.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/donate_50.js"></script>
+<script type="text/javascript" src="js/donate.js"></script>
+
 
 </html>
