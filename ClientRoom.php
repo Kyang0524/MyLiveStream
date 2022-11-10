@@ -51,9 +51,6 @@
             </div>
 
             </section>
-      
-            <section id="stream__container">
-
 
             <section id="stream__container">
                 
@@ -81,10 +78,6 @@
 
             </section>
 
-<section id="VIP__display__container">
-
-
-            </section>
                     <section id="VIP__display__container">
 
                         <!-- <div id = "donate_2000">
