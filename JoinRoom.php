@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 
 $DATABASE_HOST='20.25.120.191:3306';
@@ -56,7 +56,7 @@ endif
     <main id="lobby-container">
         <div id="form-container">
             <div id="form__container__header">
-                <p>👋 Input Streamer name to Join a Room</p>
+                <p>Join LiveStream🔍</p>
             </div>
 
             <div id="form__content__wrapper">
