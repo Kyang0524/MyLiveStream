@@ -50,18 +50,24 @@
             <div id="member__list">
             </div>
 
+<<<<<<< HEAD
             </section>
 
+=======
+            
+            <section id="stream__container">
+>>>>>>> c2ddce9c536aaa8f2582a698da9e76e79baff57b
 
             <section id="stream__container">
                 
                 <div id="stream__box"></div>
+<<<<<<< HEAD
 
 
+=======
+      
+>>>>>>> c2ddce9c536aaa8f2582a698da9e76e79baff57b
                 <div id="streams__container"></div>
-                    
-                
-
                 
                 <div class="stream_actions" hidden>
                     
@@ -82,7 +88,13 @@
                 <button id="join-btn">Join Stream</button>
 
             </section>
+<<<<<<< HEAD
 <section id="VIP__display__container">
+=======
+
+            </section>
+                    <section id="VIP__display__container">
+>>>>>>> c2ddce9c536aaa8f2582a698da9e76e79baff57b
                         <!-- <div id = "donate_2000">
                             <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
                         </div> -->
@@ -102,6 +114,10 @@
                             <img class = "img_donate_show" src="images/redpack.gif">x<a id="clicks_50" >0</a>
                           </div>
                     </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2ddce9c536aaa8f2582a698da9e76e79baff57b
             <section id="gift__container">
                 <button type="submit" onclick="return donate_50();" value="50" name="money" id="btn_50">
                     <img class = "img_donate_btn" src="/images/red-envelope.png" id="img"><br>$50

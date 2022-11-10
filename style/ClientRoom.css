@@ -395,8 +395,13 @@
   width: 450px;
   margin: 30px;
   position:absolute;
+<<<<<<< HEAD
   z-index:auto;
   left:450px;
+=======
+  z-index: auto;
+  left: 350px;
+>>>>>>> c2ddce9c536aaa8f2582a698da9e76e79baff57b
 }
 #donate_1000, #donate_2000{
   background-color:transparent;
