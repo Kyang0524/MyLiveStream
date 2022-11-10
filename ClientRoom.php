@@ -19,7 +19,7 @@
             <button id="members__button">
                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#ede0e0"><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
             </button>
-            <a href="Home.php">
+            <a href="#">
                 <h3 id="logo">
                     <span>LiveStream</span>
                 </h3>
@@ -55,26 +55,32 @@
             <section id="stream__container">
 
                 <div id="stream__box"></div>
-                        
-                <div id="streams__container"></div>
-                <section id="donate__display__container">
-      
-                        <div id = "donate_2000">
-                          <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_2000" >0</a>
-                        </div>
+
+                    <section id="VIP__display__container">
+                        <!-- <div id = "donate_2000">
+                            <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
+                        </div> -->
                         <div id = "donate_1000">
-                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_1000" >0</a>
-                          </div>
+                            <img class = "VIP_img_donate_show" src="images/rocket.gif">x<a id="clicks_1000" >0</a>
+                        </div>
+                    </section>   
+                    <section id="donate__display__container">
+       
                           <div id = "donate_500">
-                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_500" >0</a>
+                            <img class = "img_donate_show" src="images/heli.gif">x<a id="clicks_500" >0</a>
                           </div>
                           <div id = "donate_100">
-                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_100" >0</a>
+                            <img class = "img_donate_show" src="images/car.gif">x<a id="clicks_100" >0</a>
                           </div>
                           <div id = "donate_50">
-                            <img class = "img_donate_show" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png">x<a id="clicks_50" >0</a>
+                            <img class = "img_donate_show" src="images/redpack.gif">x<a id="clicks_50" >0</a>
                           </div>
-                </section>
+                    </section>
+                <div id="streams__container"></div>
+                    
+                
+
+                
                 <div class="stream_actions">
                     
                     <!-- <button id="camera-btn" class="active">
@@ -97,21 +103,24 @@
 
             <section id="gift__container">
                 <button type="submit" onclick="return donate_50();" value="50" name="money" id="btn_50">
-                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$50
+                    <img class = "img_donate_btn" src="/images/red-envelope.png" id="img"><br>$50
                 </button>
                
                 <button type="submit" onclick="return donate_100();" value="100" name="money" id="btn_100">
-                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$100
+                    <img class = "img_donate_btn" src="/images/sport-car.png" id="img"><br>$100
                 </button>
+
                 <button type="submit" onclick="return donate_500();" value="500" name="money" id="btn_500">
-                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$500
+                    <img class = "img_donate_btn" src="/images/helicopter.png" id="img"><br>$500
                 </button>
+
                 <button type="submit" onclick="return donate_1000();" value="1000" name="money" id="btn_1000">
-                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$1000
+                    <img class = "img_donate_btn" src="images/rocket.png" id="img"><br>$1000
                 </button>
-                <button type="submit" onclick="return donate_2000();" value="2000" name="money" id="btn_2000">
-                    <img class = "img_donate_btn" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/null/external-flower-valentines-day-flatart-icons-flat-flatarticons-2.png" id="img"><br>$2000
-                </button>
+                
+                <!-- <button type="submit" onclick="return donate_2000();" value="2000" name="money" id="btn_2000">
+                    <img class = "img_donate_btn" src="/images/car.png" id="img"><br>$2000
+                </button> -->
             </section>
 
             <section id="messages__container">

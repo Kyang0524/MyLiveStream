@@ -370,7 +370,7 @@
   width: 215px;
   overflow: hidden;
 }
-#donate_50, #donate_100, #donate_500, #donate_1000, #donate_2000 {
+#donate_50, #donate_100, #donate_500{
   background-color:transparent;
   height: 50px;
   width: 215px;
@@ -380,6 +380,27 @@
   display:none;
   
 }
+#VIP__display__container{
+  background-color: transparent;
+  height: 50vh;
+  width: 1980;
+  overflow: hidden;
+}
+.VIP_img_donate_show{
+  height: 350px;
+  width: 450px;
+  margin: 30px;
+}
+#donate_1000, #donate_2000{
+  background-color:transparent;
+  height: 400px;
+  width: 215px;
+  color: white;
+  left:250px;
+  font-family: 'Lobster', cursive; 
+  display:none;
+}
+
 #btn_50, #btn_100, #btn_500, #btn_1000, #btn_2000 {
   background-color:transparent;
   border:0;
