@@ -24,7 +24,7 @@ $errors = array();
   
         <div id="form__content__wrapper">
           <form action="GetDB.php" method="post">
-            <!-- <?php include('errors.php');?> -->
+            <?php include('errors.php');?>
             <input type="text" name="username" id="username" placeholder="Room Name" required />
             <button type="submit" class="submit-btn" name="CreateRoom" onclick="SetCreateName()">Create</button>
           </form>
