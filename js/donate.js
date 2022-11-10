@@ -51,9 +51,12 @@ function donate_50(){
         cache:false,
         success: function (html)
         {
-           alert(clientmoney);
-           alert(clientname);
-           alert(streamername);
+          // alert(clientmoney);
+          // alert(clientname);
+          // alert(streamername);
+         let message  = `donate redbag`;
+         channel.sendMessage({text:JSON.stringify({'type':'botchat','message':message,'displayName':displayName})});
+         addDonateMessageToDom(`${displayName}`,`${message}`);
         }
     });
     return false;

@@ -370,6 +370,9 @@
   height: 100px;
   width: 215px;
   overflow: hidden;
+  position:absolute;
+  z-index:auto;
+  left:450px;
 }
 #donate_50, #donate_100, #donate_500{
   background-color:transparent;
@@ -391,6 +394,9 @@
   height: 350px;
   width: 450px;
   margin: 30px;
+  position:absolute;
+  z-index:auto;
+  left:450px;
 }
 #donate_1000, #donate_2000{
   background-color:transparent;

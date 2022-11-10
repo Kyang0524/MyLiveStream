@@ -52,30 +52,12 @@
 
             </section>
 
-            <section id="stream__container">
 
+            <section id="stream__container">
+                
                 <div id="stream__box"></div>
 
-                    <section id="VIP__display__container">
-                        <!-- <div id = "donate_2000">
-                            <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
-                        </div> -->
-                        <div id = "donate_1000">
-                            <img class = "VIP_img_donate_show" src="images/rocket.gif">x<a id="clicks_1000" >0</a>
-                        </div>
-                    </section>   
-                    <section id="donate__display__container">
-       
-                          <div id = "donate_500">
-                            <img class = "img_donate_show" src="images/heli.gif">x<a id="clicks_500" >0</a>
-                          </div>
-                          <div id = "donate_100">
-                            <img class = "img_donate_show" src="images/car.gif">x<a id="clicks_100" >0</a>
-                          </div>
-                          <div id = "donate_50">
-                            <img class = "img_donate_show" src="images/redpack.gif">x<a id="clicks_50" >0</a>
-                          </div>
-                    </section>
+
                 <div id="streams__container"></div>
                     
                 
@@ -100,7 +82,26 @@
                 <button id="join-btn">Join Stream</button>
 
             </section>
-
+<section id="VIP__display__container">
+                        <!-- <div id = "donate_2000">
+                            <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
+                        </div> -->
+                        <div id = "donate_1000">
+                            <img class = "VIP_img_donate_show" src="images/rocket.gif">x<a id="clicks_1000" >0</a>
+                        </div>
+                    </section>   
+                    <section id="donate__display__container">
+       
+                          <div id = "donate_500">
+                            <img class = "img_donate_show" src="images/heli.gif">x<a id="clicks_500" >0</a>
+                          </div>
+                          <div id = "donate_100">
+                            <img class = "img_donate_show" src="images/car.gif">x<a id="clicks_100" >0</a>
+                          </div>
+                          <div id = "donate_50">
+                            <img class = "img_donate_show" src="images/redpack.gif">x<a id="clicks_50" >0</a>
+                          </div>
+                    </section>
             <section id="gift__container">
                 <button type="submit" onclick="return donate_50();" value="50" name="money" id="btn_50">
                     <img class = "img_donate_btn" src="/images/red-envelope.png" id="img"><br>$50
