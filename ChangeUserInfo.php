@@ -59,19 +59,19 @@
     
 </head>
     <body>
-<form action="ChangeUserInfo.php" method="post">
-    <input type="text" id="searchname" name="searchname" placeholder="Check User">
-    <button type="submit" name="Get_user">Go</button>
-</form>   
+ 
 <table>
-<tr>
+            <tr>
                 <th>UID</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Money</th>
                 <th>Permission</th>
             </tr>
-
+<form action="ChangeUserInfo.php" method="post">
+    <input type="text" id="searchname" name="searchname" placeholder="Check User">
+    <button type="submit" name="Get_user">Go</button>
+</form>  
 <?php 
 include('DBInfo.php');
 if(isset($_POST['Get_user'])){
