@@ -2,12 +2,18 @@
         if(!isset($_SESSION['username'])){
         $_SESSION['msg']="You must log in first";
         header("location:Login.php");
-}
+        }
+        
         if(isset($_GET['logout'])){
         session_destroy();
         unset($_SESSION['username']);
-        header("location: Home.php");
-}
+        header("location: Login.php");
+
+        }
+        
+        if($_SESSION['permission']== 1){
+          header("location: Admin.php");
+        }
 ?>
 <?php include('DBInfo.php')?>
 <?php

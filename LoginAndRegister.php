@@ -79,6 +79,7 @@ if (isset($_POST['login_user'])) {
   	  $_SESSION['username'] = $username;     
   	  $_SESSION['money'] = $rowData['money'];
       $_SESSION['UID'] = $rowData['UID'];
+      $_SESSION['permission'] = $rowData['permission'];
       $permission = $rowData['permission'];
       if($permission == 1){
   	  header("location: Admin.php");
