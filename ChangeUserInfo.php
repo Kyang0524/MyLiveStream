@@ -69,6 +69,7 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Money</th>
+                <th>Permission</th>
             </tr>
 
 <?php 
@@ -81,7 +82,7 @@ if(isset($_POST['Get_user'])){
 
     if($result -> num_rows >0){
       while($row = $result -> fetch_assoc()){
-          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
+          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td><td>" . $row["permission"] . "</td></tr>" ;
       }
       echo "</table>";
   }
@@ -117,12 +118,52 @@ if(isset($_POST['Change_user_Info'])){
     $result = $db -> query($sql2);
     if($result -> num_rows >0){
       while($row = $result -> fetch_assoc()){
-          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
+          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td><td>" . $row["permission"] . "</td></tr>" ;
       }
       echo "</table>";
   }
   else{
-      echo $oldmoney;
+      echo "TopUp Fail";
+  }
+  $db ->close();
+
+}
+
+?>
+
+<form action="ChangeUserInfo.php" method="post">
+    <br><input type="text" id="searchname" name="searchname" placeholder="Input Username">
+<select name="permission" id="permission">
+    <option >Choose permission</option>
+    <option  value='1'>1</option>
+    <option  value='0'>0</option>
+</select>
+    <button type="submit" name="Change_user_permission">Go</button>
+</form> 
+<?php 
+include('DBInfo.php');
+if(isset($_POST['Change_user_permission'])){
+    $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
+    $newpermission = mysqli_real_escape_string($db,$_POST['permission']);
+
+    $sql = "SELECT * from users WHERE username='$searchUser' ";
+    $results = mysqli_query($db, $sql);
+    $rowData = $results -> fetch_assoc();
+    if(mysqli_num_rows($results)==1){
+      $query2 = "UPDATE users SET permission='$newpermission' WHERE username='$searchUser' ";
+      mysqli_query($db, $query2);
+    }
+
+    $sql2 = "SELECT * from users WHERE username='$searchUser' ";
+    $result = $db -> query($sql2);
+    if($result -> num_rows >0){
+      while($row = $result -> fetch_assoc()){
+          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td><td>" . $row["permission"]. "</td></tr>" ;
+      }
+      echo "</table>";
+  }
+  else{
+      echo "Set Permission Fail";
   }
   $db ->close();
 
