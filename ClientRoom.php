@@ -50,11 +50,12 @@
             <div id="member__list">
             </div>
 
-            
-            <section id="stream__container">
+            </section>
 
+            <section id="stream__container">
+                
                 <div id="stream__box"></div>
-      
+
                 <div id="streams__container"></div>
                 
                 <div class="stream_actions" hidden>
@@ -77,8 +78,8 @@
 
             </section>
 
-            </section>
                     <section id="VIP__display__container">
+
                         <!-- <div id = "donate_2000">
                             <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
                         </div> -->

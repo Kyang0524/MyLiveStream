@@ -57,6 +57,10 @@ let handleChannelMessage = async (messageData, MemberId) => {
         addMessageToDom(data.displayName, data.message)
     }
 
+    if(data.type === 'botchat'){
+        addDonateMessageToDom(data.displayName, data.message)
+    }
+
     if(data.type === 'user_left'){
         document.getElementById(`user-container-${data.uid}`).remove()
 
@@ -98,6 +102,23 @@ let addMessageToDom = (name, message) => {
     }
 }
 
+let addDonateMessageToDom = (name, message) => {
+    let messagesWrapper = document.getElementById('messages')
+
+    let newMessage = `<div class="message__wrapper">
+    <div class="message__body__bot">
+        <strong class="message__author__bot">❤️ Chat Room Bot ❤️ </strong>
+        <p class="message__text__bot"><strong >${name} </strong>${message}</p>
+    </div>
+</div>`
+
+    messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
+
+    let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
+    if(lastMessage){
+        lastMessage.scrollIntoView()
+    }
+}
 
 let addBotMessageToDom = (botMessage) => {
     let messagesWrapper = document.getElementById('messages')
