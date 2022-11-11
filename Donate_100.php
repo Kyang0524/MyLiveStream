@@ -14,7 +14,7 @@
         $results = mysqli_query($db, $query2);
         $rowData = $results -> fetch_assoc();
         if (mysqli_num_rows($results) == 1) {
-             $streamermoney = $rowData['money'] + '50' ;
+             $streamermoney = $rowData['money'] + '100' ;
              $query3 = "UPDATE users SET money='$streamermoney' WHERE username='$streamername' ";
              mysqli_query($db, $query3);
         }

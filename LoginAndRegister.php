@@ -1,5 +1,7 @@
 <?php 
-session_start();
+session_start();?>
+<?php include('DBInfo.php')?>
+<?php
 function generateUid(){
   return uniqid();
 }
@@ -7,13 +9,6 @@ function generateUid(){
 $username = "";
 $email    = "";
 $errors = array(); 
-
-$DATABASE_HOST='20.25.120.191:3306';
-$DATABASE_USER='root';
-$DATABASE_PASS='123456';
-$DATABASE_NAME='users';
-// connect to the database
-$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -53,12 +48,13 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
     $UID = generateUid();
     $money = 0;
-  	$query = "INSERT INTO users (UID, username, email, password, money) 
-  			  VALUES('$UID', '$username', '$email', '$password', '$money')";
+    $permission = 0;
+  	$query = "INSERT INTO users (UID, username, email, password, money, permission) 
+  			  VALUES('$UID', '$username', '$email', '$password', '$money' , '$permission')";
   	mysqli_query($db, $query);
   	//$_SESSION['username'] = $username;
   	//$_SESSION['success'] = "You are now logged in";
-  	header('location: Home.php');
+  	header('location: Login.php');
   }
 }
 
@@ -83,7 +79,13 @@ if (isset($_POST['login_user'])) {
   	  $_SESSION['username'] = $username;     
   	  $_SESSION['money'] = $rowData['money'];
       $_SESSION['UID'] = $rowData['UID'];
-  	  header("location: Home.php");
+      $permission = $rowData['permission'];
+      if($permission == 1){
+  	  header("location: Admin.php");
+      }
+      else{
+        header("location: Home.php");
+      }
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}

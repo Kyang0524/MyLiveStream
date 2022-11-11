@@ -5,7 +5,7 @@
 <link rel='stylesheet' type='text/css' media='screen' href='style/showDB.css'>
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
-    <!-- <script type="text/javascript" src="js/room_rtc.js"></script> -->
+    <script type="text/javascript" src="js/room_rtc.js"></script>
     <meta name="generator" content="Nicepage 4.20.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -24,7 +24,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Home.php" style="padding: 10px 2px;">Home</a>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
 <!--
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
@@ -38,7 +38,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
 <!--
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
@@ -64,25 +64,17 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Money</th>
+                <th>Permission</th>
             </tr>
+            <?php include('DBInfo.php')?>
             <?php 
-            $DATABASE_HOST='127.0.0.1:3306';
-            $DATABASE_USER='ky';
-            $DATABASE_PASS='123456';
-            $DATABASE_NAME='users';
-            // connect to the database
-            $db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            if( $db -> connect_error){
-                die("Connection failed:" . $db -> connect_error);
-                
-            }
 
             $sql = "SELECT * from users";
             $result = $db -> query($sql);
 
             if($result -> num_rows >0){
                 while($row = $result -> fetch_assoc()){
-                    echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
+                    echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td><td>" . $row["permission"] . "</td></tr>"  ;
                 }
                 echo "</table>";
             }
@@ -92,5 +84,13 @@
             $db ->close();
             ?>
         </table>
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-58e8"><div class="u-clearfix u-sheet u-sheet-1">
+    <p class="u-small-text u-text u-text-variant u-text-1"><b id='currentname'></b>
+    <p> <a href="Login.php?logout='1'" style="color:red;">logout</a> </p>
+</div>
+<script>
+   currentname.innerHTML = sessionStorage.getItem('display_name');
+</script>
+</footer>
     </body>
 </html>

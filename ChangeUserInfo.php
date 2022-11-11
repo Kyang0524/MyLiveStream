@@ -24,7 +24,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Home.php" style="padding: 10px 2px;">Home</a>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Admin.php" style="padding: 10px 2px;">Home</a>
 <!--
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
@@ -37,7 +37,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Admin.php">Home</a>
 <!--
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
@@ -70,19 +70,9 @@
                 <th>Email</th>
                 <th>Money</th>
             </tr>
+
 <?php 
-$DATABASE_HOST='127.0.0.1:3306';
-$DATABASE_USER='ky';
-$DATABASE_PASS='123456';
-$DATABASE_NAME='users';
-// connect to the database
-$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-
-if( $db -> connect_error){
-  die("Connection failed:" . $db -> connect_error);
-  
-}
-
+include('DBInfo.php');
 if(isset($_POST['Get_user'])){
     $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
 
@@ -109,18 +99,7 @@ if(isset($_POST['Get_user'])){
     <button type="submit" name="Change_user_Info">Go</button>
 </form> 
 <?php 
-$DATABASE_HOST='127.0.0.1:3306';
-$DATABASE_USER='ky';
-$DATABASE_PASS='123456';
-$DATABASE_NAME='users';
-// connect to the database
-$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-
-if( $db -> connect_error){
-  die("Connection failed:" . $db -> connect_error);
-  
-}
-
+include('DBInfo.php');
 if(isset($_POST['Change_user_Info'])){
     $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
     $money = mysqli_real_escape_string($db,$_POST['money']);
