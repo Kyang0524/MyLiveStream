@@ -29,7 +29,6 @@
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
 -->
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="ChangeUserInfo.php" style="padding: 10px 2px;">ChangeUserInfo</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="CreateRoom.php"  style="padding: 10px 0px 10px 2px;" >CreateRoom</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="JoinRoom.php"  style="padding: 10px 0px 10px 2px;" >JoinRoom</a>
 </li></ul>
@@ -43,7 +42,6 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
 -->
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="ChangeUserInfo.php">ChangeUserInfo</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CreateRoom.php" >CreateRoom</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="JoinRoom.php">JoinRoom</a>
 </li></ul>
@@ -56,41 +54,102 @@
           <img src="images/1200px-YouTube_Diamond_Play_Button.svg.png" class="u-logo-image u-logo-image-1">
         </a>
       </div></header>
+    
+    
+    
 </head>
     <body>
-        <table>
-            <tr>
+<form action="ChangeUserInfo.php" method="post">
+    <input type="text" id="searchname" name="searchname" placeholder="Check User">
+    <button type="submit" name="Get_user">Go</button>
+</form>   
+<table>
+<tr>
                 <th>UID</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Money</th>
             </tr>
-            <?php 
-            $DATABASE_HOST='127.0.0.1:3306';
-            $DATABASE_USER='ky';
-            $DATABASE_PASS='123456';
-            $DATABASE_NAME='users';
-            // connect to the database
-            $db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            if( $db -> connect_error){
-                die("Connection failed:" . $db -> connect_error);
-                
-            }
+<?php 
+$DATABASE_HOST='127.0.0.1:3306';
+$DATABASE_USER='ky';
+$DATABASE_PASS='123456';
+$DATABASE_NAME='users';
+// connect to the database
+$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 
-            $sql = "SELECT * from users";
-            $result = $db -> query($sql);
+if( $db -> connect_error){
+  die("Connection failed:" . $db -> connect_error);
+  
+}
 
-            if($result -> num_rows >0){
-                while($row = $result -> fetch_assoc()){
-                    echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
-                }
-                echo "</table>";
-            }
-            else{
-                echo "0 result";
-            }
-            $db ->close();
-            ?>
-        </table>
-    </body>
+if(isset($_POST['Get_user'])){
+    $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
+
+    $sql = "SELECT * from users WHERE username='$searchUser' ";
+    $result = $db -> query($sql);
+
+    if($result -> num_rows >0){
+      while($row = $result -> fetch_assoc()){
+          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
+      }
+      echo "</table>";
+  }
+  else{
+      echo "No This User!";
+  }
+  $db ->close();
+
+}
+?>
+
+<form action="ChangeUserInfo.php" method="post">
+    <br><input type="text" id="searchname" name="searchname" placeholder="Input Username">
+    <input type="text" id="money" name="money" placeholder="topup money">
+    <button type="submit" name="Change_user_Info">Go</button>
+</form> 
+<?php 
+$DATABASE_HOST='127.0.0.1:3306';
+$DATABASE_USER='ky';
+$DATABASE_PASS='123456';
+$DATABASE_NAME='users';
+// connect to the database
+$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+if( $db -> connect_error){
+  die("Connection failed:" . $db -> connect_error);
+  
+}
+
+if(isset($_POST['Change_user_Info'])){
+    $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
+    $money = mysqli_real_escape_string($db,$_POST['money']);
+
+    $sql = "SELECT * from users WHERE username='$searchUser' ";
+    $results = mysqli_query($db, $sql);
+    $rowData = $results -> fetch_assoc();
+    if(mysqli_num_rows($results)==1){
+      $newmoney = $rowData['money'] + $money;
+      $query2 = "UPDATE users SET money='$newmoney' WHERE username='$searchUser' ";
+      mysqli_query($db, $query2);
+    }
+
+    $sql2 = "SELECT * from users WHERE username='$searchUser' ";
+    $result = $db -> query($sql2);
+    if($result -> num_rows >0){
+      while($row = $result -> fetch_assoc()){
+          echo "<tr><td>". $row["UID"] . "</td><td>" . $row["username"] . "</td><td>" . $row["email"] . "</td><td>" . $row["money"] . "</td></tr>" ;
+      }
+      echo "</table>";
+  }
+  else{
+      echo $oldmoney;
+  }
+  $db ->close();
+
+}
+
+?>
+</body>
+
 </html>
