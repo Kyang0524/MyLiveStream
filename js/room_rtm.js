@@ -141,12 +141,12 @@ let addDonateMessageToDom = (name, message) => {
    
         stopimg_50 = setTimeout(function() { 
         $('#donate_50').fadeOut('fast');
-        clicks_50 = 0;
+        send_clicks_50 = 0;
         }, 2000);
      
-        if(clicks_50 == 99){
+        if(send_clicks_50 == 99){
         $('#donate_50').fadeOut('fast');
-        clicks_50 = 0;
+        send_clicks_50 = 0;
         clearTimeout(stopimg_50);
         } 
         showAnimationWrapper .insertAdjacentHTML('beforeend',show)
@@ -165,12 +165,12 @@ let addDonateMessageToDom = (name, message) => {
    
         stopimg_100 = setTimeout(function() { 
         $('#donate_100').fadeOut('fast');
-        clicks_100 = 0;
+        send_clicks_100 = 0;
         }, 2000);
      
-        if(clicks_100 == 99){
+        if(send_clicks_100 == 99){
         $('#donate_100').fadeOut('fast');
-        clicks_100 = 0;
+        send_clicks_100 = 0;
         clearTimeout(stopimg_100);
         } 
         showAnimationWrapper .insertAdjacentHTML('beforeend',show)
@@ -189,12 +189,12 @@ let addDonateMessageToDom = (name, message) => {
    
         stopimg_500 = setTimeout(function() { 
         $('#donate_500').fadeOut('fast');
-        clicks_500 = 0;
+        send_clicks_500 = 0;
         }, 2000);
      
-        if(clicks_500 == 99){
+        if(send_clicks_500 == 99){
         $('#donate_500').fadeOut('fast');
-        clicks_500 = 0;
+        send_clicks_500 = 0;
         clearTimeout(stopimg_500);
         } 
         showAnimationWrapper .insertAdjacentHTML('beforeend',show)
@@ -213,12 +213,12 @@ let addDonateMessageToDom = (name, message) => {
    
         stopimg_1000 = setTimeout(function() { 
         $('#donate_1000').fadeOut('fast');
-        clicks_1000 = 0;
+        send_clicks_1000 = 0;
         }, 2000);
      
-        if(clicks_1000 == 99){
+        if(send_clicks_1000 == 99){
         $('#donate_1000').fadeOut('fast');
-        clicks_1000 = 0;
+        send_clicks_1000 = 0;
         clearTimeout(stopimg_1000);
         } 
         showAnimationWrapper .insertAdjacentHTML('beforeend',show)
