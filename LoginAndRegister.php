@@ -48,8 +48,12 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
     $UID = generateUid();
     $money = 0;
-    $permission = 0;
-  	$query = "INSERT INTO users (UID, username, email, password, money, permission) 
+    if($username == 'admin' ){
+      $permission =1;
+    }else{
+      $permission = 0;
+    }
+    $query = "INSERT INTO users (UID, username, email, password, money, permission) 
   			  VALUES('$UID', '$username', '$email', '$password', '$money' , '$permission')";
   	mysqli_query($db, $query);
   	//$_SESSION['username'] = $username;
