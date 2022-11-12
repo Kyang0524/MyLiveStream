@@ -1,4 +1,17 @@
 <?php session_start();?>
+<?php include('DBInfo.php')?>
+<?php
+
+        $currentname = $_SESSION['username'];
+        $query = "SELECT * FROM users WHERE username='$currentname' ";
+        $results = mysqli_query($db, $query);
+        $rowData = $results -> fetch_assoc();
+        if (mysqli_num_rows($results) == 1) {
+        $_SESSION['money'] = $rowData['money'];
+        }
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
