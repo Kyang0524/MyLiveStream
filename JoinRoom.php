@@ -63,6 +63,10 @@ endif
                     <input type="text" name="streamer" id="streamer" required/>
                     <button type="submit" class="submit-btn" name="JoinRoom" onclick="getRoom()" >Submit</button>
                 </form>
+                </br>
+                <a href="Home.php">
+                    <button id="back_btn">Back</button>
+                </a>
             </div>
         </div>
     </main>
