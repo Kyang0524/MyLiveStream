@@ -1,4 +1,15 @@
-<?php include('LoginAndRegister.php')?>
+<?php include('LoginAndRegister.php');
+
+$createtable = 'CREATE TABLE IF NOT EXISTS users (
+  `UID` VARCHAR(45) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `money` INT NULL,
+  `permission` INT NULL,
+  PRIMARY KEY (`username`));';
+  mysqli_query($db,$createtable);
+?>
 <!DOCTYPE html>
 <html>
 <head>
