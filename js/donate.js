@@ -96,9 +96,12 @@ if(clicks_100 == 99){
         cache:false,
         success: function (html)
         {
-           alert(clientmoney);
-           alert(clientname);
-           alert(streamername);
+         //   alert(clientmoney);
+         //   alert(clientname);
+         //   alert(streamername);
+         let message  = `donate car`;
+         channel.sendMessage({text:JSON.stringify({'type':'botchat','message':message,'displayName':displayName})});
+         addDonateMessageToDom(`${displayName}`,`${message}`);
         }
     });
     return false;
@@ -138,9 +141,12 @@ if(clicks_500 == 99){
        cache:false,
        success: function (html)
        {
-          alert(clientmoney);
-          alert(clientname);
-          alert(streamername);
+         //  alert(clientmoney);
+         //  alert(clientname);
+         //  alert(streamername);
+         let message  = `donate helicopter`;
+         channel.sendMessage({text:JSON.stringify({'type':'botchat','message':message,'displayName':displayName})});
+         addDonateMessageToDom(`${displayName}`,`${message}`);
        }
    });
    return false;
@@ -180,9 +186,12 @@ if(clicks_1000 == 99){
        cache:false,
        success: function (html)
        {
-          alert(clientmoney);
-          alert(clientname);
-          alert(streamername);
+         //  alert(clientmoney);
+         //  alert(clientname);
+         //  alert(streamername);
+         let message  = `donate roket`;
+         channel.sendMessage({text:JSON.stringify({'type':'botchat','message':message,'displayName':displayName})});
+         addDonateMessageToDom(`${displayName}`,`${message}`);
        }
    });
    return false;
