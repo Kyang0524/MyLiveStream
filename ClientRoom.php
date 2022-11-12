@@ -11,6 +11,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/ClientRoom.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/donateShow.css'>
+    
 </head>
 <body>
 

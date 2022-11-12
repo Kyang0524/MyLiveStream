@@ -7,7 +7,7 @@
     <title>Room</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
-
+    <link rel='stylesheet' type='text/css' media='screen' href='style/donateShow.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/StreamerRoom.css'>
 </head>
 <body>
@@ -73,6 +73,30 @@
                 <button id="join-btn">Join Stream</button>
             </section>
 
+            </section>
+
+                    <section id="VIP__display__container">
+
+                        <!-- <div id = "donate_2000">
+                            <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
+                        </div> -->
+                        <div id = "donate_1000">
+                            <img class = "VIP_img_donate_show" src="images/rocket.gif">x<a id="clicks_1000" >0</a>
+                        </div>
+                    </section>   
+                    <section id="donate__display__container">
+       
+                          <div id = "donate_500">
+                            <img class = "img_donate_show" src="images/heli.gif">x<a id="clicks_500" >0</a>
+                          </div>
+                          <div id = "donate_100">
+                            <img class = "img_donate_show" src="images/car.gif">x<a id="clicks_100" >0</a>
+                          </div>
+                          <div id = "donate_50">
+                            <img class = "img_donate_show" src="images/redpack.gif">x<a id="clicks_50" >0</a>
+                          </div>
+                    </section>
+
             <section id="messages__container">
 
                 <div id="messages"></div>
@@ -91,6 +115,7 @@
 <script type="text/javascript" src="js/room.js"></script>
 <script type="text/javascript" src="js/room_rtm.js"></script>
 <script type="text/javascript" src="js/room_rtc.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script>
  currentname.innerHTML = sessionStorage.getItem('display_name');
 </script>
