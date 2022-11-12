@@ -68,6 +68,7 @@ let joinRoomInit = async () => {
 }
 
 let joinStream = async () => {
+    $('#loading').fadeOut('fast');
     document.getElementById('join-btn').style.display = 'none'
     document.getElementsByClassName('stream__actions')[0].style.display = 'flex'
 
@@ -75,7 +76,6 @@ let joinStream = async () => {
         width:{min:640, ideal:1920, max:1920},
         height:{min:480, ideal:1080, max:1080}
     }})
-
 
     let player = `<div class="video__container" id="user-container-${uid}">
                     <div class="video-player" id="user-${uid}"></div>
@@ -118,22 +118,29 @@ let switchToCamera = async () => {
 }
 
 let handleUserPublished = async (user, mediaType) => {
+    $('#loading').fadeIn('fast')
     remoteUsers[user.uid] = user
 
     await client.subscribe(user, mediaType)
 
     let player = document.getElementById(`user-container-${user.uid}`)
     if(player === null){
+        
         player = `<div class="video__container" id="user-container-${user.uid}">
                 <div class="video-player" id="user-${user.uid}"></div>
             </div>`
 
         document.getElementById('streams__container').insertAdjacentHTML('beforeend', player)
         document.getElementById(`user-container-${user.uid}`).addEventListener('click', expandVideoFrame)
-   
+        
+    }
+    if( player !== null){
+        $('#loading').fadeOut('fast')
     }
 
+
     if(displayFrame.style.display){
+        
         let videoFrame = document.getElementById(`user-container-${user.uid}`)
         videoFrame.style.height = '100px'
         videoFrame.style.width = '100px'
@@ -141,6 +148,7 @@ let handleUserPublished = async (user, mediaType) => {
 
     if(mediaType === 'video'){
         user.videoTrack.play(`user-${user.uid}`)
+        
     }
 
     if(mediaType === 'audio'){
@@ -150,6 +158,8 @@ let handleUserPublished = async (user, mediaType) => {
 }
 
 let handleUserLeft = async (user) => {
+
+
     delete remoteUsers[user.uid]
     let item = document.getElementById(`user-container-${user.uid}`)
     if(item){
@@ -242,6 +252,7 @@ let toggleScreen = async (e) => {
 
 let leaveStream = async (e) => {
     e.preventDefault()
+    $('#loading').fadeIn('fast');
 
     document.getElementById('join-btn').style.display = 'block'
     document.getElementsByClassName('stream__actions')[0].style.display = 'none'

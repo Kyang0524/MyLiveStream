@@ -181,7 +181,7 @@
   display: none;
 }
 
-#stream__box .video__container{
+#stream__box .video__container {
   border: 2px solid #000;
   border-radius: 0;
   height: 100%!important;
@@ -204,7 +204,7 @@
   margin-bottom: 225px;
 }
 
-.video__container{
+.video__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,3 +356,9 @@
   display:none;
 }
 
+#loading {
+    display: block;
+    position:absolute;
+    z-index: 999;
+    
+}

@@ -40,7 +40,6 @@
 
     <main class="container">
         <div id="room__container">
-
             <section id="members__container">
 
             <div id="members__header">
@@ -53,11 +52,14 @@
 
             </section>
 
+            <img id="loading" src="images/loading.gif" width="100%" height="185%">
+
             <section id="stream__container">
                 
                 <div id="stream__box"></div>
-
+                
                 <div id="streams__container"></div>
+                
                 
                 <div class="stream_actions" hidden>
                     
