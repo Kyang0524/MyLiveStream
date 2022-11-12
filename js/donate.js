@@ -38,7 +38,8 @@ function donate_50(){
     var clientmoney = currentmoney.innerHTML;
     var clientname = currentname.innerHTML;
     var streamername = sessionStorage.getItem('streamer_name');
-    
+
+        
     $.ajax({
         type:"post",
         url:"Donate_50.php",

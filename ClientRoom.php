@@ -12,7 +12,6 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/ClientRoom.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/donateShow.css'>
-    
 </head>
 <body>
 
@@ -144,6 +143,8 @@
 <script type="text/javascript" src="js/room_rtc.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/donate.js"></script>
+
+
 
 
 </html>

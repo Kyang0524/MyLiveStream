@@ -1,14 +1,5 @@
 <?php include('LoginAndRegister.php');
 
-$createtable = 'CREATE TABLE IF NOT EXISTS users (
-  `UID` VARCHAR(45) NOT NULL,
-  `username` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
-  `money` INT NULL,
-  `permission` INT NULL,
-  PRIMARY KEY (`username`));';
-  mysqli_query($db,$createtable);
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +32,7 @@ $createtable = 'CREATE TABLE IF NOT EXISTS users (
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-1ce5"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-text u-text-default u-text-white u-text-1">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" href="Home.html">LiveStream </a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" >LiveStream </a>
         </p>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -52,12 +43,12 @@ $createtable = 'CREATE TABLE IF NOT EXISTS users (
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-          <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Home.html" style="padding: 10px 2px;">Home</a>
+          <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
 <!--
         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
 -->
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Feedback</a>
 </li></ul>
           </div>
@@ -65,12 +56,12 @@ $createtable = 'CREATE TABLE IF NOT EXISTS users (
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
 <!--
               </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
               </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
 -->
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Contact</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">Feedback</a>
 </li></ul>
               </div>
@@ -95,8 +86,7 @@ $createtable = 'CREATE TABLE IF NOT EXISTS users (
          <button type="submit" class="submit-btn" name="login_user" onclick="saveData()">Submit</button>
          <input type="checkbox"><span>Remember Me</span>
        </form>
-  <button type="button" class="btn" onclick="backpage()">I'm New User</button>
-  <a href="">Forgot Password</a>                                  
+  <button type="button" class="btn" onclick="backpage()">I'm New User</button>                               
   </div>
 <div class="card-back">
   <h2>Register</h2>

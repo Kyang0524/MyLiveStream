@@ -10,7 +10,7 @@ if( $db -> connect_error){
   die("Connection failed:" . $db -> connect_error);
   
 }
-$createtable = 'CREATE TABLE IF NOT EXISTS users (
+$createuserstable = 'CREATE TABLE IF NOT EXISTS users (
   `UID` VARCHAR(45) NOT NULL,
   `username` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -18,6 +18,14 @@ $createtable = 'CREATE TABLE IF NOT EXISTS users (
   `money` INT NULL,
   `permission` INT NULL,
   PRIMARY KEY (`username`));';
-  mysqli_query($db,$createtable);
+  mysqli_query($db,$createuserstable);
+
+  $createroomtable = 'CREATE TABLE IF NOT EXISTS users (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `RoomID` VARCHAR(45) NOT NULL,
+    `roomname` VARCHAR(45) NOT NULL,
+    `streamername` VARCHAR(45) NOT NULL,
+    PRIMARY KEY (`id`));';
+    mysqli_query($db,$createroomtable);
 
 ?>
