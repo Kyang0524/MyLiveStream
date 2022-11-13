@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-$errors = array(); 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +20,9 @@ $errors = array();
           <p><b>Create Room<b></p>
         </div>
         <div id="form__content__wrapper">
+          <p><b style="color: black;"><?php echo $_SESSION['error'];  unset($_SESSION['error']);?><b></p>
           <form action="GetDB.php" method="post">
-            <?php include('errors.php');?>
-            <input type="text" name="username" id="username" placeholder="Room Name" required />
+            <input type="text" name="streamusername" id="streamusername" placeholder="Enter username to create a room" required />
             <button type="submit" class="submit-btn" name="CreateRoom" onclick="SetCreateName()">Create</button>
           </form>
           </br>

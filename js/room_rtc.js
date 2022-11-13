@@ -45,6 +45,7 @@ let localScreenTracks;
 let sharingScreen = false;
 
 let joinRoomInit = async () => {
+
     rtmClient = await AgoraRTM.createInstance(APP_ID)
     await rtmClient.login({uid,token})
 
@@ -118,7 +119,7 @@ let switchToCamera = async () => {
 }
 
 let handleUserPublished = async (user, mediaType) => {
-    $('#loading').fadeIn('fast')
+    
     remoteUsers[user.uid] = user
 
     await client.subscribe(user, mediaType)
@@ -157,9 +158,10 @@ let handleUserPublished = async (user, mediaType) => {
 
 }
 
-let handleUserLeft = async (user) => {
-
-
+let handleUserLeft = async (user,displayName,id) => {
+    if(displayName!=id){
+        $('#loading').fadeIn('fast')
+    }
     delete remoteUsers[user.uid]
     let item = document.getElementById(`user-container-${user.uid}`)
     if(item){
@@ -252,7 +254,7 @@ let toggleScreen = async (e) => {
 
 let leaveStream = async (e) => {
     e.preventDefault()
-    $('#loading').fadeIn('fast');
+    
 
     document.getElementById('join-btn').style.display = 'block'
     document.getElementsByClassName('stream__actions')[0].style.display = 'none'

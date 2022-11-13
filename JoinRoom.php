@@ -8,15 +8,17 @@ $errors = array();
 
 if(isset($_SESSION['username'])):
 $username = $_SESSION['username'];
-
+$streamername = $_POST['streamer'];
 
 
 $query = "SELECT * FROM users WHERE username='$username' ";
 $results = mysqli_query($db, $query);
 $rowData = $results -> fetch_assoc();
-
 $money = $rowData['money'];
 
+if($username == $streamername){
+    array_push($errors, "You are this room streamer!");
+}else{
 if (isset($_POST['JoinRoom'])) {
     $streamer = mysqli_real_escape_string($db, $_POST['streamer']);
   
@@ -36,6 +38,7 @@ if (isset($_POST['JoinRoom'])) {
         }
     }
   }
+}
 
 endif
 ?>
@@ -60,7 +63,7 @@ endif
             <div id="form__content__wrapper">
                 <form action="JoinRoom.php" method="post">
                     <?php include('errors.php');?>
-                    <input type="text" name="streamer" id="streamer" required/>
+                    <input type="text" name="streamer" id="streamer" placeholder="Enter the username of the live broadcaster to enter the room"required/>
                     <button type="submit" class="submit-btn" name="JoinRoom" onclick="getRoom()" >Submit</button>
                 </form>
                 </br>

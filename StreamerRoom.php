@@ -50,7 +50,6 @@
             </section>
 
             <section id="stream__container">
-            <img id="loading" src="images/loading.gif">
 
                 <div id="stream__box"></div>
 
