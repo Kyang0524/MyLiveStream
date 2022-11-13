@@ -16,8 +16,11 @@ var stopimg_2000;
 
 
 function donate_50(){
-    
-
+    var currentmoney = document.getElementById("currentmoney");
+    var money=document.getElementById('btn_50').value;
+    checkmoney = parseInt(currentmoney.innerHTML) - parseInt(money);
+    if(checkmoney>= 0){
+      
    onClick_50(); 
    $('#donate_50').fadeIn('fast');
    
@@ -32,8 +35,8 @@ function donate_50(){
      clearTimeout(stopimg_50);
    } 
 
-    var currentmoney = document.getElementById("currentmoney");
-    var money=document.getElementById('btn_50').value;
+    
+    
     currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
     var clientmoney = currentmoney.innerHTML;
     var clientname = currentname.innerHTML;
@@ -61,26 +64,32 @@ function donate_50(){
         }
     });
     return false;
+  }else{
+    alert("Not enough money!");
+  }
 }
 
 function donate_100(){
-   
-   onClick_100(); 
-   $('#donate_100').fadeIn('fast');
+  var currentmoney = document.getElementById("currentmoney");
+  var money=document.getElementById('btn_100').value;
+  checkmoney = parseInt(currentmoney.innerHTML) - parseInt(money);
+  if(checkmoney >= 0){
 
-stopimg_100 = setTimeout(function() { 
+    onClick_100(); 
+    $('#donate_100').fadeIn('fast');
+
+    stopimg_100 = setTimeout(function() { 
       $('#donate_100').fadeOut('fast');
       clicks_100 = 0;
-}, 3000);
+    }, 3000);
   
-if(clicks_100 == 99){
-  $('#donate_100').fadeOut('fast');
+  if(clicks_100 == 99){
+      $('#donate_100').fadeOut('fast');
       clicks_100 = 0;
   clearTimeout(stopimg_100);
 }  
    
-    var currentmoney = document.getElementById("currentmoney");
-    var money=document.getElementById('btn_100').value;
+    
     currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
     var clientmoney = currentmoney.innerHTML;
     var clientname = currentname.innerHTML;
@@ -106,10 +115,17 @@ if(clicks_100 == 99){
         }
     });
     return false;
+}else{
+  alert("Not enough money!");
+}
 }
 
 function donate_500(){
-   
+   var currentmoney = document.getElementById("currentmoney");
+   var money=document.getElementById('btn_500').value;
+   checkmoney = parseInt(currentmoney.innerHTML) - parseInt(money);
+   if(checkmoney>= 0){
+
   onClick_500(); 
   $('#donate_500').fadeIn('fast');
 
@@ -124,8 +140,7 @@ if(clicks_500 == 99){
  clearTimeout(stopimg_500);
 }  
   
-   var currentmoney = document.getElementById("currentmoney");
-   var money=document.getElementById('btn_500').value;
+   
    currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
    var clientmoney = currentmoney.innerHTML;
    var clientname = currentname.innerHTML;
@@ -151,10 +166,16 @@ if(clicks_500 == 99){
        }
    });
    return false;
+}else{
+  alert("Not enough money!");
+}
 }
 
 function donate_1000(){
-   
+   var currentmoney = document.getElementById("currentmoney");
+   var money=document.getElementById('btn_1000').value;
+   checkmoney = parseInt(currentmoney.innerHTML) - parseInt(money);
+    if(checkmoney>= 0){
   onClick_1000(); 
   $('#donate_1000').fadeIn('fast');
 
@@ -169,8 +190,7 @@ if(clicks_1000 == 99){
  clearTimeout(stopimg_1000);
 }  
   
-   var currentmoney = document.getElementById("currentmoney");
-   var money=document.getElementById('btn_1000').value;
+   
    currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
    var clientmoney = currentmoney.innerHTML;
    var clientname = currentname.innerHTML;
@@ -196,10 +216,16 @@ if(clicks_1000 == 99){
        }
    });
    return false;
+}else{
+  alert("Not enough money!");
+}
 }
 
 function donate_2000(){
-   
+  var currentmoney = document.getElementById("currentmoney");
+  var money=document.getElementById('btn_2000').value;
+  checkmoney = parseInt(currentmoney.innerHTML) - parseInt(money);
+  if(checkmoney>= 0){
   onClick_2000(); 
   $('#donate_2000').fadeIn('fast');
 
@@ -214,8 +240,7 @@ if(clicks_2000 == 99){
  clearTimeout(stopimg_2000);
 }  
   
-   var currentmoney = document.getElementById("currentmoney");
-   var money=document.getElementById('btn_2000').value;
+   
    currentmoney.innerHTML = parseInt(currentmoney.innerHTML) - parseInt(money);
    var clientmoney = currentmoney.innerHTML;
    var clientname = currentname.innerHTML;
@@ -238,6 +263,9 @@ if(clicks_2000 == 99){
        }
    });
    return false;
+}else{
+  alert("Not enough money!");
+}
 }
 
 
