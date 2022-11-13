@@ -9,7 +9,7 @@ $streamusername = $_POST['streamusername'];
 $username = $_SESSION['username'];
 
 if($streamusername != $username){
-    $_SESSION['error'] = "You are not this room streamer!";
+    $_SESSION['error'] = "You are not this room live broadcaster!";
     header("location: CreateRoom.php");
 }
 

@@ -17,7 +17,7 @@ $rowData = $results -> fetch_assoc();
 $money = $rowData['money'];
 
 if($username == $streamername){
-    array_push($errors, "You are this room streamer!");
+    array_push($errors, "You are this room live broadcaster!");
 }else{
 if (isset($_POST['JoinRoom'])) {
     $streamer = mysqli_real_escape_string($db, $_POST['streamer']);
