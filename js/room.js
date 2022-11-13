@@ -72,5 +72,22 @@ let hideDisplayFrame = () => {
       videoFrames[i].style.width = '300px'
   }
 }
+function deleteroom(){
+    var streamername = sessionStorage.getItem('streamer_name');
+    $.ajax({
+        type:"post",
+        url:"DeleteRoom.php",
+        data:
+        {
+           'streamername' :streamername
+        },
+        cache:false,
+        success: function (html)
+        {
+
+        }
+    });
+
+}
 
 displayFrame.addEventListener('click', hideDisplayFrame)

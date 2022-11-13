@@ -158,10 +158,13 @@ let handleUserPublished = async (user, mediaType) => {
 
 }
 
+
+  
 let handleUserLeft = async (user,displayName,id) => {
     if(displayName!=id){
         $('#loading').fadeIn('fast')
     }
+    
     delete remoteUsers[user.uid]
     let item = document.getElementById(`user-container-${user.uid}`)
     if(item){

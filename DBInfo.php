@@ -21,11 +21,10 @@ $createuserstable = 'CREATE TABLE IF NOT EXISTS users (
   mysqli_query($db,$createuserstable);
 
   $createroomtable = 'CREATE TABLE IF NOT EXISTS users (
-    `id` INT NOT NULL AUTO_INCREMENT,
     `RoomID` VARCHAR(45) NOT NULL,
     `roomname` VARCHAR(45) NOT NULL,
     `streamername` VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id`));';
+    PRIMARY KEY (`streamername`));';
     mysqli_query($db,$createroomtable);
 
 ?>
