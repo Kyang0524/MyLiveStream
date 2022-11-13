@@ -101,7 +101,6 @@
 
         <table>
             <tr>
-                <th>id</th>
                 <th>RoomID</th>
                 <th>roomname</th>
                 <th>streamername</th>
@@ -113,12 +112,12 @@
 
             if($result -> num_rows >0){
                 while($row = $result -> fetch_assoc()){
-                    echo "<tr><td>". $row["id"] . "</td><td>" . $row["RoomID"] . "</td><td>" . $row["roomname"] . "</td><td>" . $row["streamername"] . "</td></tr>"  ;
+                    echo "<tr><td>" . $row["RoomID"] . "</td><td>" . $row["roomname"] . "</td><td>" . $row["streamername"] . "</td></tr>"  ;
                 }
                 echo "</table>";
             }
             else{
-                echo "<tr><td>". "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td></tr>"  ;
+                echo "<tr><td>". "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td></tr>"  ;
                 echo "</table>";
             }
             $db ->close();

@@ -130,7 +130,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-1">
 
                   <img id="room1"src="images/loading.gif" width="220px" height="150px">
-                  <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user1']?></div>
+                  <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user1']?></div>
                   <script> if(<?php echo $_SESSION['user1']!= "No live broadcaster"?>){$('#room1').fadeOut('fast');}</script>
                   
                 </div>
