@@ -137,7 +137,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
                 <form action="<?php echo $_SESSION['room1'];?>" method="POST">
-                <button onclick="getroom1()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> &nbsp;Button</button>
+                <button onclick="getroom1()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> &nbsp;Join</button>
                 </form>
               </div>
             </div>
@@ -153,7 +153,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2">
                 <form action="<?php echo $_SESSION['room2'];?>" method="POST">
-                <button onclick="getroom2()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;Button</button>
+                <button onclick="getroom2()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;Join</button>
                 </form>
               </div>
             </div>
@@ -169,7 +169,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
                 <form action="<?php echo $_SESSION['room3'];?>" method="POST">
-                <button onclick="getroom3()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;Button</button>
+                <button onclick="getroom3()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;Join</button>
                 </form>
               </div>
             </div>
@@ -185,7 +185,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
                 <form action="<?php echo $_SESSION['room4'];?>" method="POST">
-                <button onclick="getroom4()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4"> &nbsp;Button</button>
+                <button onclick="getroom4()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4"> &nbsp;Join</button>
                 </form>
               </div>
             </div>
@@ -201,7 +201,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
                 <form action="<?php echo $_SESSION['room5'];?>" method="POST">
-                <button onclick="getroom5()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5"> &nbsp;Button</button>
+                <button onclick="getroom5()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5"> &nbsp;Join</button>
                 </form>
               </div>
             </div>
