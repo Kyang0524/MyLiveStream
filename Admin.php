@@ -80,9 +80,8 @@
                 <th>Money</th>
                 <th>Permission</th>
             </tr>
-            <?php include('DBInfo.php')?>
             <?php 
-
+            include('DBInfo.php');
             $sql = "SELECT * from users";
             $result = $db -> query($sql);
 
@@ -93,11 +92,37 @@
                 echo "</table>";
             }
             else{
-                echo "0 result";
+              echo "<tr><td>". "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td></tr>"  ;
+              echo "</table>";
             }
             $db ->close();
             ?>
         </table>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>RoomID</th>
+                <th>roomname</th>
+                <th>streamername</th>
+            </tr>
+            <?php 
+            include('DBInfo.php');
+            $sql2 = "SELECT * from room";
+            $result = $db -> query($sql2);
+
+            if($result -> num_rows >0){
+                while($row = $result -> fetch_assoc()){
+                    echo "<tr><td>". $row["id"] . "</td><td>" . $row["RoomID"] . "</td><td>" . $row["roomname"] . "</td><td>" . $row["streamername"] . "</td></tr>"  ;
+                }
+                echo "</table>";
+            }
+            else{
+                echo "<tr><td>". "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td><td>" . "empty" . "</td></tr>"  ;
+                echo "</table>";
+            }
+            $db ->close();
+            ?>
         <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-58e8"><div class="u-clearfix u-sheet u-sheet-1">
     <p class="u-small-text u-text u-text-variant u-text-1"><b id='currentname'></b></br>
     $<b id='currentmoney'></b></p>

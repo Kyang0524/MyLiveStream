@@ -15,7 +15,7 @@ let channel;
 //const queryString = window.location.search
 //const urlParams = new URLSearchParams(queryString)
 function SetCreateName() {  
-    var streamer = document.getElementById("username");
+    var streamer = document.getElementById("streamusername");
     sessionStorage.setItem("streamer_name", streamer.value);  
     }  
 function getRoom(){

@@ -15,7 +15,11 @@
           header("location: Admin.php");
         }
 ?>
-<?php include('DBInfo.php')?>
+<?php 
+include('DBInfo.php');
+include('Getroom.php');
+
+?>
 <?php
 
         $currentname = $_SESSION['username'];
@@ -55,6 +59,7 @@
     <meta property="og:title" content="Home">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
+    <script type="text/javascript" src="js/jquery.js"></script>
   </head>
   <header>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-1ce5"><div class="u-clearfix u-sheet u-sheet-1">
@@ -120,54 +125,84 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
             </span>
           </a>
           <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" data-href="blog/post.html">
+            <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" >
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-1">
-                  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" data-autoplay="1" frameborder="0" allowfullscreen=false></iframe>
+
+                  <img id="room1"src="images/loading.gif" width="220px" height="150px">
+                  <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user1']?></div>
+                  <script> if(<?php echo $_SESSION['user1']!= "No live broadcaster"?>){$('#room1').fadeOut('fast');}</script>
+                  
                 </div>
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
-                <a href="getLink()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> &nbsp;Button</a>
+                <form action="<?php echo $_SESSION['room1'];?>" method="POST">
+                <button onclick="getroom1()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> &nbsp;Button</button>
+                </form>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-2">
-                  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
+
+                <img id="room2" src="images/loading.gif" width="220px" height="150px">
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user2']?></div>
+                <script> if(<?php echo $_SESSION['user2'] != "No live broadcaster"?>){$('#room2').fadeOut('fast');}</script>
+                
                 </div>
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2">
-                <a href="https://nicepage.com/k/card-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;Button</a>
+                <form action="<?php echo $_SESSION['room2'];?>" method="POST">
+                <button onclick="getroom2()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;Button</button>
+                </form>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-3">
-                  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
+               
+                <img id="room3"src="images/loading.gif" width="220px" height="150px">  
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user3']?></div>
+                <script> if(<?php echo $_SESSION['user3'] != "No live broadcaster"?>){$('#room3').fadeOut('fast');}</script>              
+                  
                 </div>
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
-                <a href="https://nicepage.com/k/card-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;Button</a>
+                <form action="<?php echo $_SESSION['room3'];?>" method="POST">
+                <button onclick="getroom3()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;Button</button>
+                </form>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-4">
-                  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
+
+                <img id="room4"src="images/loading.gif" width="220px" height="150px">  
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user4']?></div>                
+                <script> if(<?php echo $_SESSION['user4'] != "No live broadcaster"?>){$('#room4').fadeOut('fast');}</script>            
+
                 </div>
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
-                <a href="https://nicepage.com/k/card-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4">Button</a>
+                <form action="<?php echo $_SESSION['room4'];?>" method="POST">
+                <button onclick="getroom4()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4"> &nbsp;Button</button>
+                </form>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-radius-30 u-repeater-item u-shape-round u-video u-video-contain" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-5">
-                  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
+
+                <img id="room5" src="images/loading.gif" width="220px" height="150px">
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user5']?></div>
+                <script> if(<?php echo $_SESSION['user5'] != "No live broadcaster"?>){$('#room5').fadeOut('fast');}</script>
+
                 </div>
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
-                <a href="https://nicepage.com/k/card-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5">Button</a>
+                <form action="<?php echo $_SESSION['room5'];?>" method="POST">
+                <button onclick="getroom5()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5"> &nbsp;Button</button>
+                </form>
               </div>
             </div>
           </div>
@@ -208,5 +243,34 @@ background-color: #000000 !important
    currentmoney.innerHTML = sessionStorage.getItem('currentmoney');
 </script>
 </footer>
+<?php 
+$room1 = $_SESSION['user1'];
+$room2 = $_SESSION['user2'];
+$room3 = $_SESSION['user3'];
+$room4 = $_SESSION['user4'];
+$room5 = $_SESSION['user5'];
+?>
+<script>
+var room11 = "<?php echo $room1?>"
+var room22 = "<?php echo $room2?>"
+var room33 = "<?php echo $room3?>"
+var room44 = "<?php echo $room4?>"
+var room55 = "<?php echo $room5?>"
+function getroom1(){
+ sessionStorage.setItem("streamer_name",room11) 
+}
+function getroom2(){
+  sessionStorage.setItem("streamer_name",room22)
+}
+function getroom3(){
+  sessionStorage.setItem("streamer_name",room33)
+}
+function getroom4(){
+  sessionStorage.setItem("streamer_name",room44)
+}
+function getroom5(){
+  sessionStorage.setItem("streamer_name",room55)
+}
+</script>
   
 </body></html>
