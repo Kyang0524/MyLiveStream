@@ -130,7 +130,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-1">
 
                   <img id="room1"src="images/loading.gif" width="100%" height="100%">
-                  <div style="text-align: center; margin:60px; color:yellow; background-image: url(../images/shownamebackground.gif); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user1']?></div>
+                  <div style="text-align: center; margin:60px; color:black; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; "><?php echo $_SESSION['user1']?></div>
                   <script> if(<?php echo $_SESSION['user1']!= "No live broadcaster"?>){$('#room1').fadeOut('fast');}</script>
                   
                 </div>
@@ -147,7 +147,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-2">
 
                 <img id="room2" src="images/loading.gif" width="100%" height="100%">
-                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user2']?></div>
+                <div style="text-align: center; margin:60px; color:black; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; "><?php echo $_SESSION['user2']?></div>
                 <script> if(<?php echo $_SESSION['user2'] != "No live broadcaster"?>){$('#room2').fadeOut('fast');}</script>
                 
                 </div>
@@ -164,7 +164,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-3">
                
                 <img id="room3"src="images/loading.gif" width="100%" height="100%">  
-                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user3']?></div>
+                <div style="text-align: center; margin:60px; color:black; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; "><?php echo $_SESSION['user3']?></div>
                 <script> if(<?php echo $_SESSION['user3'] != "No live broadcaster"?>){$('#room3').fadeOut('fast');}</script>              
                   
                 </div>
@@ -181,7 +181,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-4">
 
                 <img id="room4"src="images/loading.gif" width="100%" height="100%">  
-                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user4']?></div>                
+                <div style="text-align: center; margin:60px; color:black; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; "><?php echo $_SESSION['user4']?></div>                
                 <script> if(<?php echo $_SESSION['user4'] != "No live broadcaster"?>){$('#room4').fadeOut('fast');}</script>            
 
                 </div>
@@ -198,7 +198,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
                 <div class="embed-responsive embed-responsive-5">
 
                 <img id="room5" src="images/loading.gif" width="100%" height="100%">
-                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user5']?></div>
+                <div style="text-align: center; margin:60px; color:black; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; "><?php echo $_SESSION['user5']?></div>
                 <script> if(<?php echo $_SESSION['user5'] != "No live broadcaster"?>){$('#room5').fadeOut('fast');}</script>
 
                 </div>
@@ -228,7 +228,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     </section>
     <section class="u-clearfix u-grey-25 u-section-2" id="sec-3488">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-body-alt-color u-text-default u-text-1">LiveStream </h2>
+        <h2 class="u-text u-text-body-alt-color u-text-default u-text-1">LiveStream_Group4 </h2>
         <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-grey-80 u-hover-white u-radius-30 u-btn-1">Button</a>
       </div>
     </section>
