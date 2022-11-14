@@ -20,7 +20,7 @@ $createuserstable = 'CREATE TABLE IF NOT EXISTS users (
   PRIMARY KEY (`username`));';
   mysqli_query($db,$createuserstable);
 
-  $createroomtable = 'CREATE TABLE IF NOT EXISTS users (
+$createroomtable = 'CREATE TABLE IF NOT EXISTS room (
     `RoomID` VARCHAR(45) NOT NULL,
     `roomname` VARCHAR(45) NOT NULL,
     `streamername` VARCHAR(45) NOT NULL,

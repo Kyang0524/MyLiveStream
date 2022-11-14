@@ -7,7 +7,10 @@ include('DBInfo.php');
 
 $sql2 = "SELECT * from room";
 $result = $db -> query($sql2);
-
+if (!$result) {
+    printf("Error: %s\n", mysqli_error($db));
+    exit();
+}
 if (mysqli_num_rows($result) > 0) {
     // 输出数据
     $room = array();

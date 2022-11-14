@@ -1,5 +1,6 @@
-<?php include('LoginAndRegister.php');
-
+<?php 
+include('LoginAndRegister.php');
+include('DBInfo.php');
 ?>
 <!DOCTYPE html>
 <html>
