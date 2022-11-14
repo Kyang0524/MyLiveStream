@@ -137,7 +137,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
                 <form action="<?php echo $_SESSION['room1'];?>" method="POST">
-                <button onclick="getroom1()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> &nbsp;Join</button>
+                <button onclick="getroom1()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-1"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 </form>
               </div>
             </div>
@@ -153,7 +154,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2">
                 <form action="<?php echo $_SESSION['room2'];?>" method="POST">
-                <button onclick="getroom2()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;Join</button>
+                <button onclick="getroom2()"class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-2"> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 </form>
               </div>
             </div>
@@ -169,7 +171,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
                 <form action="<?php echo $_SESSION['room3'];?>" method="POST">
-                <button onclick="getroom3()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;Join</button>
+                <button onclick="getroom3()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-3"> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 </form>
               </div>
             </div>
@@ -185,7 +188,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
                 <form action="<?php echo $_SESSION['room4'];?>" method="POST">
-                <button onclick="getroom4()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4"> &nbsp;Join</button>
+                <button onclick="getroom4()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-4"> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 </form>
               </div>
             </div>
@@ -201,7 +205,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               </div>
               <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
                 <form action="<?php echo $_SESSION['room5'];?>" method="POST">
-                <button onclick="getroom5()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5"> &nbsp;Join</button>
+                <button onclick="getroom5()" class="u-border-none u-btn u-btn-round u-button-style u-gradient u-none u-radius-50 u-btn-5"> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                 </form>
               </div>
             </div>
