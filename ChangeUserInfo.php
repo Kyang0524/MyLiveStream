@@ -142,6 +142,7 @@ if(isset($_POST['Change_user_Info'])){
 </form> 
 <?php 
 include('DBInfo.php');
+if($_POST['searchname'] != 'admin'){
 if(isset($_POST['Change_user_permission'])){
     $searchUser = mysqli_real_escape_string($db,$_POST['searchname']);
     $newpermission = mysqli_real_escape_string($db,$_POST['permission']);
@@ -168,7 +169,9 @@ if(isset($_POST['Change_user_permission'])){
   $db ->close();
 
 }
-
+}else{
+  echo "Cannot Change Admin permission!";
+}
 ?>
 </body>
 
