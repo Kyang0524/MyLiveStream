@@ -31,7 +31,6 @@
             <button class="nav__link" id="create__room__btn" onclick="deleteroom()">
                 Leave Room
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel"><path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3"/></svg>
-            </button>
             </form>
         </div>
     </header>
