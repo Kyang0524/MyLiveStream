@@ -129,8 +129,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-1">
 
-                  <img id="room1"src="images/loading.gif" width="220px" height="150px">
-                  <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user1']?></div>
+                  <img id="room1"src="images/loading.gif" width="100%" height="100%">
+                  <div style="text-align: center; margin:60px; color:yellow; background-image: url(../images/shownamebackground.gif); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user1']?></div>
                   <script> if(<?php echo $_SESSION['user1']!= "No live broadcaster"?>){$('#room1').fadeOut('fast');}</script>
                   
                 </div>
@@ -145,8 +145,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-2">
 
-                <img id="room2" src="images/loading.gif" width="220px" height="150px">
-                <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user2']?></div>
+                <img id="room2" src="images/loading.gif" width="100%" height="100%">
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user2']?></div>
                 <script> if(<?php echo $_SESSION['user2'] != "No live broadcaster"?>){$('#room2').fadeOut('fast');}</script>
                 
                 </div>
@@ -161,8 +161,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-3">
                
-                <img id="room3"src="images/loading.gif" width="220px" height="150px">  
-                <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user3']?></div>
+                <img id="room3"src="images/loading.gif" width="100%" height="100%">  
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user3']?></div>
                 <script> if(<?php echo $_SESSION['user3'] != "No live broadcaster"?>){$('#room3').fadeOut('fast');}</script>              
                   
                 </div>
@@ -177,8 +177,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-4">
 
-                <img id="room4"src="images/loading.gif" width="220px" height="150px">  
-                <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user4']?></div>                
+                <img id="room4"src="images/loading.gif" width="100%" height="100%">  
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user4']?></div>                
                 <script> if(<?php echo $_SESSION['user4'] != "No live broadcaster"?>){$('#room4').fadeOut('fast');}</script>            
 
                 </div>
@@ -193,8 +193,8 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
               <div class="u-background-video u-expanded" style="">
                 <div class="embed-responsive embed-responsive-5">
 
-                <img id="room5" src="images/loading.gif" width="220px" height="150px">
-                <div style="text-align: center; margin:60px; color:grey; background-image: url(../images/shownamebackground.jpg); background-size:100% 100%;border-radius:10px;font-family: 'Lobster', cursive; ">User: <?php echo $_SESSION['user5']?></div>
+                <img id="room5" src="images/loading.gif" width="100%" height="100%">
+                <div style="text-align: center; margin:50px;">User: <?php echo $_SESSION['user5']?></div>
                 <script> if(<?php echo $_SESSION['user5'] != "No live broadcaster"?>){$('#room5').fadeOut('fast');}</script>
 
                 </div>
