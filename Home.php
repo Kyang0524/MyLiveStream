@@ -80,8 +80,8 @@ include('Getroom.php');
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
 -->
-          <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Feedback</a>
+          <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Contact.html" style="padding: 10px 2px;">Contact</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="feedback.html" style="padding: 10px 2px;">Feedback</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="CreateRoom.php"  style="padding: 10px 0px 10px 2px;" >CreateRoom</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="JoinRoom.php"  style="padding: 10px 0px 10px 2px;" >JoinRoom</a>
 </li></ul>
@@ -95,8 +95,8 @@ include('Getroom.php');
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
 -->
-<li class="u-nav-item"><a class="u-button-style u-nav-link">Contact</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Feedback</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link"href="feedback.html">Feedback</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CreateRoom.php" >CreateRoom</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="JoinRoom.php">JoinRoom</a>
 </li></ul>
