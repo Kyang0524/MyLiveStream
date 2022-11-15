@@ -84,7 +84,7 @@ function deleteroom(){
         cache:false,
         success: function (html)
         {
-
+          alert("You have left the room, we are deleting your room information");
         }
     });
 
