@@ -164,8 +164,8 @@ let handleUserLeft = async (user) => {
     delete remoteUsers[user.uid]
     let item = document.getElementById(`user-container-${user.uid}`)
     if(item){
-        window.location.href='Home.php';
         item.remove()
+        window.location.href='Home.php';
     }
 
     if(userIdInDisplayFrame === `user-container-${user.uid}`){
