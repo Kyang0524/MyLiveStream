@@ -42,38 +42,45 @@ if (isset($_POST['JoinRoom'])) {
 
 endif
 ?>
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>JoinRoom</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style/JoinRoom.css'>
+<html style="font-size: 16px;" lang="en"><head>
+
+    <title>CreateRoomtest</title>
+    <link rel="stylesheet" href="style/nicepage.css" media="screen">
+    <link rel="stylesheet" href="style/CreateRoom.css" media="screen">
+    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.20.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
 </head>
-<body>
-    
-    <main id="lobby-container">
-        <div id="form-container">
-            <div id="form__container__header">
-                <p>Join LiveStream🔍</p>
+  <body class="u-body u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-custom-color-1 u-section-1" id="sec-7a32">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-container-style u-custom-color-1 u-expanded-width-xs u-group u-radius-50 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="u-container-style u-custom-color-1 u-expanded-width u-group u-shape-round u-top-left-radius-50 u-top-right-radius-50 u-group-2">
+              <div class="u-container-layout u-valign-middle u-container-layout-2">
+                <h1 class="u-text u-text-default u-text-1">Join LiveStream🔍</h1>
+              </div>
             </div>
+            <div class="u-form u-form-1">
 
-            <div id="form__content__wrapper">
-                <form action="JoinRoom.php" method="post">
-                    <?php include('errors.php');?>
-                    <input type="text" name="streamer" id="streamer" placeholder="Enter the username of the live broadcaster to enter the room"required/>
-                    <button type="submit" class="submit-btn" name="JoinRoom" onclick="getRoom()" >Submit</button>
-                </form>
-                </br>
-                <a href="Home.php">
-                    <button id="back_btn">Back</button>
-                </a>
+            <form action="JoinRoom.php" method="post" style="padding: 5px;">
+            <?php include('errors.php');?>
+                <div class="u-form-group u-form-name u-label-none">
+                  <input type="text" placeholder="Enter the username of the live broadcaster to enter the room" id="streamer" name="streamer" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-50 u-white" required>
+                </div>
+                <div class="u-align-center u-form-group u-form-submit u-label-none">
+                  <button type="submit" name="JoinRoom" onclick="getRoom()" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-hover-custom-color-2 u-radius-50 u-btn-1">Submit</button>
+                </div>
+              </form>
             </div>
+            <a href="Home.php" class="u-border-hover-palette-1-base u-border-none u-btn u-btn-round u-button-style u-custom-color-2 u-hover-custom-color-2 u-radius-50 u-btn-2">Back<br>
+            </a>
+          </div>
         </div>
-    </main>
-
+      </div>
+    </section>
     <script type="text/javascript" src="js/room_rtc.js"></script>
-
 </body>
