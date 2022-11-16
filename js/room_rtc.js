@@ -35,7 +35,7 @@ if(!roomId){
 let displayName = sessionStorage.getItem('display_name')
 
 if(!displayName){
-    window.location = '#'
+    window.location = 'Login.php'
 }
 
 let localTracks = []
@@ -43,6 +43,7 @@ let remoteUsers = {}
 
 let localScreenTracks;
 let sharingScreen = false;
+
 
 let joinRoomInit = async () => {
 
@@ -158,16 +159,12 @@ let handleUserPublished = async (user, mediaType) => {
 
 }
 
+let handleUserLeft = async (user) => {
 
-  
-let handleUserLeft = async (user,displayName,id) => {
-    if(displayName!=id){
-        $('#loading').fadeIn('fast')
-    }
-    
     delete remoteUsers[user.uid]
     let item = document.getElementById(`user-container-${user.uid}`)
     if(item){
+        window.location.href='Home.php';
         item.remove()
     }
 
@@ -271,6 +268,7 @@ let leaveStream = async (e) => {
 
     if(localScreenTracks){
         await client.unpublish([localScreenTracks])
+        
     }
 
     document.getElementById(`user-container-${uid}`).remove()

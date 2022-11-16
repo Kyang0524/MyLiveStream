@@ -7,6 +7,7 @@ let handleMemberJoined = async (MemberId) => {
 
     let {name} = await rtmClient.getUserAttributesByKeys(MemberId, ['name'])
     addBotMessageToDom(`Welcome ${name}! 🔥`)
+
 }
 
 let addMemberToDom = async (MemberId) => {
@@ -119,7 +120,7 @@ let addDonateMessageToDom = (name, message) => {
 
     let newMessage = `<div class="message__wrapper">
     <div class="message__body__bot">
-        <strong class="message__author__bot">❤️ Chat Room Bot ❤️ </strong>
+        <strong class="message__author__bot">Chat Room Bot</strong>
         <p class="message__text__bot"><strong >${name} </strong>${message}</p>
     </div>
     </div>
@@ -238,7 +239,7 @@ let addBotMessageToDom = (botMessage) => {
 
     let newMessage = `<div class="message__wrapper">
                         <div class="message__body__bot">
-                            <strong class="message__author__bot">❤️ Chat Room Bot ❤️ </strong>
+                            <strong class="message__author__bot">Chat Room Bot</strong>
                             <p class="message__text__bot">${botMessage}</p>
                         </div>
                     </div>`
