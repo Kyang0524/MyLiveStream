@@ -1,6 +1,9 @@
 <?php 
 include('LoginAndRegister.php');
 include('DBInfo.php');
+if (isset($_GET['logout'])) {
+  session_destroy();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +52,7 @@ include('DBInfo.php');
         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Login.php" style="padding: 10px 2px;">LogIn</a>
         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" href="Register.php" style="padding: 10px 2px;">Register</a>
 -->
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;">Contact</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-light-1" style="padding: 10px 2px;"href="Contact.html">Contact</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -61,7 +64,7 @@ include('DBInfo.php');
               </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.php">Login</a>
               </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.php">Register</a>
 -->
-<li class="u-nav-item"><a class="u-button-style u-nav-link">Contact</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
 </li></ul>
               </div>
             </div>

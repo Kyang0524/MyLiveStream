@@ -240,7 +240,7 @@ background-color: #000000 !important
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-58e8"><div class="u-clearfix u-sheet u-sheet-1">
     <p class="u-small-text u-text u-text-variant u-text-1"><b id='currentname'></b><br>
      $<b id='currentmoney'></b></p>
-    <p> <a href="Login.php?logout='1'" style="color:red;">logout</a> </p>
+    <p> <a href="Login.php?logout='1'"style="color:red;">logout</a> </p>
 </div>
 <script>
    currentname.innerHTML = sessionStorage.getItem('display_name');
