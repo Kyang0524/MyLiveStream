@@ -14,7 +14,6 @@ if (isset($_GET['logout'])) {
     <meta name="description" content="">
     <title>Home</title>
     <link rel="stylesheet" href="style/nicepage.css" media="screen">
-    <link rel="stylesheet" href="style/Hometest.css" media="screen">
     <link rel="stylesheet" href="style/LoginAndRegister.css">
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
