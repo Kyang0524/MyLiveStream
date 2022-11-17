@@ -168,7 +168,7 @@
 
 #stream__container {
   justify-self: center;
-  width: calc(100% - 40.7rem);
+  width: calc(100% - 35.7rem);
   position: fixed;
   left: 15.7rem;
   top: clac(100vh - 72px);
