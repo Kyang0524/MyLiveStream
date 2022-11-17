@@ -85,8 +85,8 @@ let joinStream = async () => {
                  </div>
                  `
 
-    document.getElementById('streams__container').insertAdjacentHTML('beforeend', player)
-    document.getElementById(`user-container-${uid}`).addEventListener('click', expandVideoFrame)
+    document.getElementById('stream__box').insertAdjacentHTML('beforeend', player)
+    // document.getElementById(`user-container-${uid}`).addEventListener('click', expandVideoFrame)
 
     localTracks[1].play(`user-${uid}`)
     await client.publish([localTracks[0], localTracks[1]])
@@ -133,8 +133,8 @@ let handleUserPublished = async (user, mediaType) => {
                 <div class="video-player" id="user-${user.uid}"></div>
             </div>`
 
-        document.getElementById('streams__container').insertAdjacentHTML('beforeend', player)
-        document.getElementById(`user-container-${user.uid}`).addEventListener('click', expandVideoFrame)
+        document.getElementById('stream__box').insertAdjacentHTML('beforeend', player)
+        // document.getElementById(`user-container-${user.uid}`).addEventListener('click', expandVideoFrame)
         
     }
     if( player !== null){
@@ -226,7 +226,7 @@ let toggleScreen = async (e) => {
             </div>`
 
         displayFrame.insertAdjacentHTML('beforeend', player)
-        document.getElementById(`user-container-${uid}`).addEventListener('click', expandVideoFrame)
+        // document.getElementById(`user-container-${uid}`).addEventListener('click', expandVideoFrame)
 
         userIdInDisplayFrame = `user-container-${uid}`
         localScreenTracks.play(`user-${uid}`)

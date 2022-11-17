@@ -83,6 +83,7 @@
   max-width: 25rem;
   overflow-y: auto;
   border-left: 1px solid #111;
+  display: none;
 }
 
 #messages {
@@ -171,14 +172,14 @@
   position: fixed;
   left: 15.7rem;
   top: clac(100vh - 72px);
-  overflow-y: auto;
+  overflow-y: hidden;
   height: 100%;
 }
 
 #stream__box{
-  background-color: #3f434a;
+  background-color: #1a1a1a;
   height: 60vh;
-  display: none;
+  /* display: none; */
 }
 
 #stream__box .video__container{

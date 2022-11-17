@@ -8,7 +8,7 @@
 #room__container {
   position: relative;
   display: flex;
-  gap: 3rem;
+  /* gap: 3rem; */
 }
 
 #members__container {
@@ -83,6 +83,7 @@
   max-width: 20rem;
   overflow-y: auto;
   border-left: 1px solid #111;
+  display: none;
 }
 
 #messages {
@@ -106,7 +107,7 @@
   border-radius: 10px;
   padding: 10px 15px;
   width: fit-content;
-  max-width: 900px;
+  max-width: 150px;
 }
 
 .message__body strong {
@@ -171,17 +172,17 @@
   position: fixed;
   left: 15.7rem;
   top: clac(100vh - 72px);
-  overflow-y: auto;
+  overflow-y: hidden;
   height: 100%;
 }
 
 #stream__box{
-  background-color: #3f434a;
+  background-color: #1a1a1a;
   height: 60vh;
-  display: none;
+  /* display: none; */
 }
 
-#stream__box .video__container {
+#stream__box .video__container{
   border: 2px solid #000;
   border-radius: 0;
   height: 100%!important;
@@ -204,7 +205,7 @@
   margin-bottom: 225px;
 }
 
-.video__container {
+.video__container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,8 +233,8 @@
 
 @media (max-width: 1400px) {
   .video__container{
-    height: 200px;
-    width: 200px;
+    height: 410px;
+    width: 100%;
   }
 }
 
@@ -250,6 +251,7 @@
     width: calc(100% - 25rem);
     left: 0;
   }
+  
 }
 
 @media (max-width: 980px) {
@@ -272,8 +274,8 @@
   }
 
   .video__container{
-    height: 100px;
-    width: 100px;
+    height: 410px;
+    width: 100%;
   }
 
   #messages__container {
