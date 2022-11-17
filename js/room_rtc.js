@@ -74,6 +74,7 @@ let joinStream = async () => {
     document.getElementById('join-btn').style.display = 'none'
     document.getElementsByClassName('stream__actions')[0].style.display = 'flex'
 
+
     localTracks = await AgoraRTC.createMicrophoneAndCameraTracks({}, {encoderConfig:{
         width:{min:640, ideal:1920, max:1920},
         height:{min:480, ideal:1080, max:1080}
@@ -81,7 +82,8 @@ let joinStream = async () => {
 
     let player = `<div class="video__container" id="user-container-${uid}">
                     <div class="video-player" id="user-${uid}"></div>
-                 </div>`
+                 </div>
+                 `
 
     document.getElementById('streams__container').insertAdjacentHTML('beforeend', player)
     document.getElementById(`user-container-${uid}`).addEventListener('click', expandVideoFrame)
@@ -120,7 +122,6 @@ let switchToCamera = async () => {
 }
 
 let handleUserPublished = async (user, mediaType) => {
-    
     remoteUsers[user.uid] = user
 
     await client.subscribe(user, mediaType)
@@ -243,7 +244,7 @@ let toggleScreen = async (e) => {
 
 
     }else{
-        sharingScreen = false 
+        sharingScreen = false
         cameraButton.style.display = 'block'
         document.getElementById(`user-container-${uid}`).remove()
         await client.unpublish([localScreenTracks])
