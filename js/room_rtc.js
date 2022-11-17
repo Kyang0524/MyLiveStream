@@ -80,7 +80,7 @@ let joinStream = async () => {
         height:{min:480, ideal:1080, max:1080}
     }})
 
-    let player = `<div class="video__container" id="user-container-${uid}">
+    let player = `<div style="-moz-transform:scaleX(-1);-webkit-transform:scaleX(-1);-o-transform:scaleX(-1);" class="video__container" id="user-container-${uid}">
                     <div class="video-player" id="user-${uid}"></div>
                  </div>
                  `
