@@ -19,6 +19,7 @@
   max-width: 250px;
   position: fixed;
   height: 100%;
+  z-index: 99;
   display: none;
 }
 
