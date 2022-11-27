@@ -82,7 +82,7 @@
                             <img class = "VIP_img_donate_show" src="">x<a id="clicks_2000" >0</a>
                         </div> -->
                         <div id = "donate_1000">
-                            <img class = "VIP_img_donate_show" src="images/rocket.gif">x<a id="clicks_1000" >0</a>
+                            <img class = "VIP_img_donate_show" src="images/rocket.gif" id="clicks_1000">
                         </div>
                     </section>   
                     <section id="donate__display__container">
