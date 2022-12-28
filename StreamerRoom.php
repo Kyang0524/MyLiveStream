@@ -25,7 +25,9 @@
        </div>
 
         <div id="nav__links">
-             <p class="u-small-text u-text u-text-variant u-text-1"><b id="currentname"></b></p>
+            <input type="button" value="PLAY" onclick="play()">
+            <audio id="audio" src="music1.mp3"></audio>
+            <p class="u-small-text u-text u-text-variant u-text-1"><b id="currentname"></b></p>
             <button id="chat__button"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#ede0e0" clip-rule="evenodd"><path d="M24 20h-3v4l-5.333-4h-7.667v-4h2v2h6.333l2.667 2v-2h3v-8.001h-2v-2h4v12.001zm-15.667-6l-5.333 4v-4h-3v-14.001l18 .001v14h-9.667zm-6.333-2h3v2l2.667-2h8.333v-10l-14-.001v10.001z"/></svg></button>
             <form action="Home.php" method="POST">
             <button class="nav__link" id="create__room__btn" onclick="deleteroom()">
@@ -119,5 +121,10 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script>
  currentname.innerHTML = sessionStorage.getItem('display_name');
+
+ function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
 </script>
 </html>
