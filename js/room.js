@@ -79,14 +79,14 @@ function deleteroom(){
 function play() {
   let message  = `playing music`;
   channel.sendMessage({text:JSON.stringify({'type':'music','message':message,'displayName':displayName})});
-  addDonateMessageToDom(`${displayName}`,`${message}`);
+  addMusicToDom(`${displayName}`,`${message}`);
 }
 function pause() {
   var audio = document.getElementById("audio");
   audio.pause();
   let message  = `pause music`;
   channel.sendMessage({text:JSON.stringify({'type':'music','message':message,'displayName':displayName})});
-  addDonateMessageToDom(`${displayName}`,`${message}`);
+  addMusicToDom(`${displayName}`,`${message}`);
 }
 
 displayFrame.addEventListener('click', hideDisplayFrame)
