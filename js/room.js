@@ -82,8 +82,6 @@ function play() {
   addMusicToDom(`${displayName}`,`${message}`);
 }
 function pause() {
-  var audio = document.getElementById("audio");
-  audio.pause();
   let message  = `pause music`;
   channel.sendMessage({text:JSON.stringify({'type':'music','message':message,'displayName':displayName})});
   addMusicToDom(`${displayName}`,`${message}`);

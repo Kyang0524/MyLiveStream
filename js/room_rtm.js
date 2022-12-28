@@ -59,11 +59,10 @@ let handleChannelMessage = async (messageData, MemberId) => {
     }
 
     if(data.type === 'botchat'){
-        addMusicToDom(data.displayName, data.message)
-        
+        addDonateMessageToDom(data.displayName, data.message)
     }
     if(data.type === 'music'){
-        addDonateMessageToDom(data.displayName, data.message)
+        addMusicToDom(data.displayName, data.message)
         
     }
 
@@ -98,13 +97,18 @@ let addMusicToDom = (name, message) => {
                             <strong class="message__author__bot">Chat Room Bot</strong>
                             <p class="message__text__bot">${message}</p>
                         </div>
-                    </div>`
+                    </div>
+                    <script>
+                        function play() {
+                          var audio = document.getElementById("audio");
+                          audio.play();
+                        }
+                    </script>`
     
     
 
     messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
-    var audio = document.getElementById("audio");
-    audio.play();
+
     let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
     if(lastMessage){
         lastMessage.scrollIntoView()
