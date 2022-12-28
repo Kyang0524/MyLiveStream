@@ -80,11 +80,13 @@ function play() {
   let message  = `playing music`;
   channel.sendMessage({text:JSON.stringify({'type':'music','message':message,'displayName':displayName})});
   addMusicToDom(`${displayName}`,`${message}`);
+  channel.audio.play();
 }
 function pause() {
   let message  = `pause music`;
   channel.sendMessage({text:JSON.stringify({'type':'music','message':message,'displayName':displayName})});
   addMusicToDom(`${displayName}`,`${message}`);
+  channel.audio.pause();
 }
 
 displayFrame.addEventListener('click', hideDisplayFrame)
