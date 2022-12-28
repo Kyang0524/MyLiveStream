@@ -103,9 +103,12 @@ let addMusicToDom = (name, message) => {
 
     messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
     if(message == 'playing music'){
-    var audio = document.getElementById("audio")
-    audio.onplay();
-    }
+        var audio = document.getElementById("audio")
+        audio.play();
+      }else if(message == 'pause music'){
+        var audio = document.getElementById("audio")
+        audio.pause();
+      }
     let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
     if(lastMessage){
         lastMessage.scrollIntoView()
