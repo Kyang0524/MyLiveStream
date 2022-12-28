@@ -91,7 +91,8 @@ let sendMessage = async (e) => {
 let addMusicToDom = (name, message) => {
     let messagesWrapper = document.getElementById('messages')
 
-    let newMessage = `<div class="message__wrapper">
+    let newMessage = `<audio id="audio" src="music1.mp3"></audio>
+                        <div class="message__wrapper">
                         <div class="message__body__bot">
                             <strong class="message__author__bot">Chat Room Bot</strong>
                             <p class="message__text__bot">${message}</p>
@@ -101,6 +102,10 @@ let addMusicToDom = (name, message) => {
     
 
     messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
+    if(message == 'playing music'){
+    var audio = document.getElementById("audio")
+    audio.onplay();
+    }
     let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
     if(lastMessage){
         lastMessage.scrollIntoView()
